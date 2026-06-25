@@ -20,7 +20,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.phys.Vec3;
@@ -154,7 +153,7 @@ public class CrownfallEvents {
         if (warcryCd > 0) { king.getPersistentData().putInt("crownfall_warcry_cd", --warcryCd); }
 
         // Skill Execution — radius maxSkillRange blocks + line of sight required
-        double maxSkillRange = Math.max(30.0D, 30.0D + globalKills);
+        double maxSkillRange = Math.min(64.0D, 30.0D + globalKills);
         List<ServerPlayer> playersInRange = level.getPlayers(p -> p.distanceTo(king) < maxSkillRange && !p.isSpectator() && p.isAlive() && king.hasLineOfSight(p));
         if (playersInRange.isEmpty()) return;
 
@@ -181,7 +180,7 @@ public class CrownfallEvents {
             final double offsetX = (i == 0) ? 0 : (RANDOM.nextDouble() * 4 - 2);
             final double offsetZ = (i == 0) ? 0 : (RANDOM.nextDouble() * 4 - 2);
             level.getServer().tell(new net.minecraft.server.TickTask(level.getServer().getTickCount() + delay, () -> {
-                if (target.isAlive() && !target.isRemoved()) {
+                if (target.isAlive() && !target.isRemoved() && king.isAlive() && !king.isRemoved()) {
                     LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(level);
                     if (bolt != null) { 
                         bolt.moveTo(target.getX() + offsetX, target.getY(), target.getZ() + offsetZ); 
