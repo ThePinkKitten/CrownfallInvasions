@@ -1,0 +1,20 @@
+Summary for D:\Games\ModrinthApp\launcher_logs\profiles\Gun\mods\ImprovableSkills-1.20.1-20.1.13.jar
+Decompiled with CFR 0.152
+
+
+org.zeith.improvableskills.client.gui.GuiUpdateBook
+----------------------------
+
+drawBack(net.minecraft.client.gui.GuiGraphics float int int )
+  Unable to fully structure code
+m_6375_(double double int )
+  Unable to fully structure code
+
+
+org.zeith.improvableskills.client.gui.abil.ench.GuiPortableEnchantment
+----------------------------
+
+m_6375_(double double int )
+  Unable to fully structure code
+m_280003_(net.minecraft.client.gui.GuiGraphics int int )
+  Unable to fully structure code

@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+issueTrackerURL="https://github.com/dragon-forge/ImprovableSkills/issues"
+license="All Rights Reserved"
+[[mods]]
+modId="improvableskills"
+version="20.1.13"
+displayName="Improvable Skills"
+updateJSONURL="https://api.modrinth.com/updates/9fT7HUaI/forge_updates.json"
+displayURL="https://modrinth.com/mod/9fT7HUaI"
+logoFile="examplemod.png"
+credits="[:]"
+authors="Zeitheron"
+description='''Boost player's abilities as well as granting useful abilities using single book and your XP. (And more)'''
+
+[[dependencies.improvableskills]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE" # NONE/BEFORE/AFTER
+    side="BOTH"
+[[dependencies.improvableskills]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.improvableskills]]
+    modId="hammerlib"
+    mandatory=true
+    versionRange="[20.1.46,)"
+    ordering="NONE"
+    side="BOTH"

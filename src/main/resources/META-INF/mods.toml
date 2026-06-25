@@ -1,0 +1,31 @@
+modLoader="javafml" #mandatory
+license="${mod_license}"
+loaderVersion="${loader_version_range}" #mandatory
+issueTrackerURL="https://github.com/ThePinkKitten/CrownfallInvasions/issues" #optional
+
+[[mods]] #mandatory
+modId="crownfallinvasions" #mandatory
+version="${mod_version}" #mandatory
+displayName="Crownfall Invasions" #mandatory
+updateJSONURL="https://raw.githubusercontent.com/ThePinkKitten/CrownfallInvasions/trunk/1.20/update.json" #optional
+displayURL="https://www.curseforge.com/minecraft/mc-mods/_curseslug_"
+logoFile="" #optional
+credits="Thanks to forge fml mcp Mojang" #optional
+authors="${mod_authors}" #optional
+
+description='''
+Crownfall Invasions - Vanilla hostile mob raid system with King, Elites, and Minions featuring advanced combat AI, phase mechanics, and coordinated horde attacks.
+'''
+
+[[dependencies.crownfallinvasions]] #optional
+    modId="forge"
+    mandatory=true
+    versionRange="${neo_version_range}"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.crownfallinvasions]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[${mc_version},)"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,1112 @@
+Manifest-Version: 1.0
+Specification-Title: improvableskills
+Specification-Vendor: Zeitheron
+Specification-Version: 1
+Implementation-Title: ImprovableSkills
+Implementation-Version: 20.1.13
+Implementation-Vendor: Zeitheron
+Implementation-Timestamp: 2025-01-18T05:31:43+0200
+MixinConfigs: mixins.improvableskills.json
+
+Name: org/zeith/improvableskills/custom/pagelets/PageletXPStorage.class
+SHA-256-Digest: eb6Ot6kWaXFjvZlwVx2zyh9B3kWYwF4oGLZvu6PzQEw=
+
+Name: org/zeith/improvableskills/client/rendering/tooltip/SkillTooltipRe
+ nderer.class
+SHA-256-Digest: AxvtvaiHjwN2bUONKiLdQhlvMHjowetVcQsPso0WvIA=
+
+Name: assets/improvableskills/textures/gui/update.png
+SHA-256-Digest: eX2S+SWn4e+5AfyC9QbyMah4jgrEAKzxmDJ6vWeXLuQ=
+
+Name: org/zeith/improvableskills/custom/abilities/AbilityAnvil$UVMagma.c
+ lass
+SHA-256-Digest: /rDoLKHRWSeiHHUeH472+ZcLBZzaHEfkxdVl6drQ+Y4=
+
+Name: org/zeith/improvableskills/client/gui/GuiBaseBookBrowser$ClickFeed
+ back.class
+SHA-256-Digest: FNUTDfShOfH03pZ0Ovs8Y0xbenMICNgyPgtieXOZ6K4=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTEFadeOutUV.class
+SHA-256-Digest: +tdfWVe6uBmdvvPa0PfVMj12fiIXROvISJyQO2xHyng=
+
+Name: org/zeith/improvableskills/utils/GoogleTranslate.class
+SHA-256-Digest: 19dVyUxigTLe1fSjcBOZ2ISyX9o0hovQvz8TlQ0pAQE=
+
+Name: org/zeith/improvableskills/utils/ScaledResolution.class
+SHA-256-Digest: tCad4fgHkIdW2crQM3bmLvtKVx8rMrZDTIyRT3vDJbQ=
+
+Name: org/zeith/improvableskills/client/rendering/tooltip/AbilityTooltip
+ Renderer.class
+SHA-256-Digest: oq/j8ERchA2OBJTnisIRDK8rORLNfYLhxDUO2gpQhnw=
+
+Name: assets/improvableskills/textures/skills/soft_landing_normal.png
+SHA-256-Digest: AI2rTwzAP3JIb+RDDPeRJlEGjYNBSKRo8fDpOmaZZVE=
+
+Name: org/zeith/improvableskills/custom/skills/SkillFastSwimmer.class
+SHA-256-Digest: i02oWObRsA5ObxgvhSGdMIb5P9Lf+q+TPkEMrsj6dyg=
+
+Name: org/zeith/improvableskills/mixins/jer/LootConditionHelperMixin.cla
+ ss
+SHA-256-Digest: nJYRLbEKgQLhLQv2WEn9P1qcZFFQgJ7cI8YwmWpQxgY=
+
+Name: org/zeith/improvableskills/api/evt/CalculateAdditionalFurnaceExper
+ ienceMultiplier.class
+SHA-256-Digest: nvkK1fFBJwAWnCiIVKzzjEhr/YxrrhTtf9HkK2yNll0=
+
+Name: org/zeith/improvableskills/client/rendering/particle/SparklePartic
+ le.class
+SHA-256-Digest: fd+ibzWM2pi545b9lEeV1UZik6K8HtC9zszbOO3EDSc=
+
+Name: assets/improvableskills/textures/gui/news.png
+SHA-256-Digest: s5NEdKf0bzVIF9lXyT7XxT3A4Azea254S80s3VXPIL4=
+
+Name: org/zeith/improvableskills/net/PacketLvlDownSkill.class
+SHA-256-Digest: T8g1+e0feVcC30wR9M0+7fMapoDgU5Por5NJB6DNAU0=
+
+Name: assets/improvableskills/sounds.json
+SHA-256-Digest: WwLLlcLGdL9IcWUkfy5SsZfeuccc2aN73x5h2ETlGgI=
+
+Name: org/zeith/improvableskills/custom/skills/SkillEnderManipulator.cla
+ ss
+SHA-256-Digest: muEQgrrQOxepRO/Ee9+tcJIDnqOvrK6bM94JNt9UcvE=
+
+Name: assets/improvableskills/textures/abilities/crafter_hovered.png
+SHA-256-Digest: t8oZaW1Dx9LBZ0n8BOg+8bzkKXyWmJzSrsXtZ9akRxE=
+
+Name: org/zeith/improvableskills/mixins/AbstractFurnaceBlockEntityMixin.
+ class
+SHA-256-Digest: CAbcujzESa16rs0vTHlyNb5sCSeI8aCf/c5AQ/+h6cY=
+
+Name: data/improvableskills/tags/blocks/growth_skill_blocklist.json
+SHA-256-Digest: bxP58La9I9t/mZtUOvBERqyAsJfZy7nSuiICTFZoPRI=
+
+Name: assets/improvableskills/lang/de_de.lang
+SHA-256-Digest: IVLtfdUXAy+2BkkbJ/ijbhFX7Zw03vzQe13iQkZXq78=
+
+Name: assets/improvableskills/textures/gui/jei.png
+SHA-256-Digest: yT9yJC5DGcP5WGhDYzEVPhV/6a5iH5mQX/NVEvZDUKA=
+
+Name: org/zeith/improvableskills/mixins/VillagerMixin.class
+SHA-256-Digest: CStRuIoCf3exv9c3LlO9Dx+Pz0+gjBwi68/L2AVl27w=
+
+Name: org/zeith/improvableskills/custom/abilities/AbilityAnvil.class
+SHA-256-Digest: FMP63Papossb/lM7gUe8iAC8SOuAlyfw0F6FlAOKNHA=
+
+Name: assets/improvableskills/textures/skills/growth_hovered.png
+SHA-256-Digest: icWZMfGI4d0Sjyi4jfIoLOWyqsNqJq+lqCHoJqPc9kM=
+
+Name: org/zeith/improvableskills/client/gui/abil/GuiAutoXpBank.class
+SHA-256-Digest: o79E5pDo1m3M1s2jPvmMynHQA/uhKLT/3yw5bcsuAmw=
+
+Name: assets/improvableskills/textures/item/scroll_ability.png
+SHA-256-Digest: JHSgxrpU8OcE4drgUdBKtmhHGZg6kBn+RVJZuFyAzME=
+
+Name: assets/improvableskills/textures/skills/treasure_sands_hovered.png
+SHA-256-Digest: zKAMiE8sx1QjrLGOblJP9tF7m1G1mKMkg0PggJNwQKs=
+
+Name: assets/improvableskills/sounds/connect.ogg
+SHA-256-Digest: vAR2vlJtgB3n/ljHvOYtfEEzcw6dtw/XPQVR+ZKH1SE=
+
+Name: assets/improvableskills/textures/gui/enchanter_lvl.png
+SHA-256-Digest: RxPHaqKwL/B9K/UOWUyjQtwEWmaqzHvJIvqhP8Of4wI=
+
+Name: org/zeith/improvableskills/client/gui/PageletDiscord.class
+SHA-256-Digest: MQHWYAWBoOY2RP5tAT7120IXkXVr0YZ7Kk0/bbYhcw8=
+
+Name: assets/improvableskills/textures/skills/soul_speed_normal.png
+SHA-256-Digest: dnFpSRVdtNUCz9mG/kYuO4b3dAa/1O8IWnEoTz4z/ms=
+
+Name: assets/improvableskills/textures/skills/enchanter_normal.png
+SHA-256-Digest: xFqQM0u0HmA+BtTZpf973inz0HvW4BLTVh9F47KwIZY=
+
+Name: org/zeith/improvableskills/client/rendering/ItemToBookHandler.clas
+ s
+SHA-256-Digest: im3wmigbUCbqEC/9mRoFlMwwsosXDY4qUfFGlktENUA=
+
+Name: org/zeith/improvableskills/api/recipe/RecipeParchmentFragment$Visu
+ alizedTestMachine.class
+SHA-256-Digest: wiiWqFlXxbMmSpsDPIVxvM0NOcm4WMf9nTPI2mLXhoM=
+
+Name: assets/improvableskills/sounds/treasure1.ogg
+SHA-256-Digest: u+djIZDypEG9G6Gqq7qXfQkAEXJel+wrq0s+PSLvcXo=
+
+Name: assets/improvableskills/textures/skills/mob_repellent_normal_hands
+ .png
+SHA-256-Digest: PqdhBQUgn5cJ4hMRGFbnbs1OJAyUOeS3RM/+k9bl0hw=
+
+Name: org/zeith/improvableskills/client/gui/GuiDiscord.class
+SHA-256-Digest: fjWUwDHcGmrQz5bdaKwO2hfxUiCamu3cpXDLsqaocWk=
+
+Name: org/zeith/improvableskills/client/gui/base/GuiCustomButton.class
+SHA-256-Digest: CIug8oTGO9nUpUE69pey0nArgiHQN7ISv4XI+qiMc7w=
+
+Name: assets/improvableskills/textures/skills/mob_repellent_hovered.png
+SHA-256-Digest: RNXWB7gKH32di9Ng6PtPMSLNe7N98hGZVCyIW9w6PaY=
+
+Name: org/zeith/improvableskills/client/gui/GuiBaseBookBrowser.class
+SHA-256-Digest: X718fz1wCrZiTV5NSqi7ULFb7gezChRjsq/588PzzgQ=
+
+Name: org/zeith/improvableskills/custom/particles/ParticleTypeWithCodec.
+ class
+SHA-256-Digest: OQQGUod/AJN1qudiPQCX9hosNHCnG9qvBCiNSgVfgrE=
+
+Name: org/zeith/improvableskills/api/evt/EntityEnchantmentLevelEvent.cla
+ ss
+SHA-256-Digest: U6Be6r/xhIP9a8mOvEk6HRT6ZppmFQKAotesHNNk6ww=
+
+Name: assets/improvableskills/textures/gui/skill_viewer.png
+SHA-256-Digest: o2jNNr2PLU93AheZl1GmRtPjIwGaDHC8HDarLTcfbpk=
+
+Name: assets/improvableskills/textures/skills/pvp_normal.png
+SHA-256-Digest: l/1qIudnaUK56i+8Myxw5BoHPaMFH2KLzJ8hr8j4L18=
+
+Name: org/zeith/improvableskills/client/gui/abil/GuiMagnetism$1.class
+SHA-256-Digest: AHgR/8Q+BaavAtZqO/RKxlR/8+yeu5EWanyxzLjJ9qA=
+
+Name: assets/improvableskills/sounds/treasure4.ogg
+SHA-256-Digest: xwwN5pyO1a8WyyMYBHV8Y+7406mLE0D7wbtO8PzC2mQ=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTEItemStack.class
+SHA-256-Digest: Y9QeUhqDtJXd5ZRwdMMN3wDqOrjWk3/eJ91unwBcPh8=
+
+Name: org/zeith/improvableskills/client/gui/abil/crafting/CraftingMenuPo
+ rtable.class
+SHA-256-Digest: E/LaeoaKfzbioDnGccM/W2UNiCSj0MyxwpO4YAb/cOU=
+
+Name: assets/improvableskills/textures/gui/enchanting_table_book_2.png
+SHA-256-Digest: 88RRuzalz+nhBFnCADz5fJWDGAdNrzoWxd5VKuDmLp4=
+
+Name: org/zeith/improvableskills/init/TreasuresIS.class
+SHA-256-Digest: NU6GGXKUDQs/CIbJNJYxwnqPjZKMTbC4ZpgFuloJLnk=
+
+Name: assets/improvableskills/textures/particle/sparkle_0.png
+SHA-256-Digest: Tgfi//jmtQjXRYHpfMoQVKxxngJWkz8l5nwPGY6EanQ=
+
+Name: org/zeith/improvableskills/api/client/IClientSkillExtensions.class
+SHA-256-Digest: cCT4Gj/zR4uAAVPWqOch4qheSAaUa5F7aoYKiBxdyso=
+
+Name: assets/improvableskills/models/item/parchment_fragment.json
+SHA-256-Digest: thV3OgXrDv4Hg9SDocWNYi4baljJn/farWeAVGYzXWA=
+
+Name: assets/improvableskills/textures/skills/ender_manipulator_hovered.
+ png
+SHA-256-Digest: mHpDjKPEPKxjWODPccWCbtcimZrDG3uOPEqXZ0GhwLs=
+
+Name: assets/improvableskills/textures/skills/leaper_normal.png
+SHA-256-Digest: 2VwERFhl6u3N98FB3a2XSNyEte/uQs0ZeSyUiTRIOjg=
+
+Name: org/zeith/improvableskills/custom/pagelets/PageletAbilities.class
+SHA-256-Digest: qKh6EfjJ/1q4rnuXY13RiVimz2TV0k38X026PqeWZYw=
+
+Name: org/zeith/improvableskills/utils/Sys.class
+SHA-256-Digest: GAxTZJCzQ4aD61+2XWp9oe9i2UikqJZx1i5KT9w9xJA=
+
+Name: org/zeith/improvableskills/api/DamageSourceProcessor.class
+SHA-256-Digest: dIZoeLe3St7p7WdXQNp+lik4h/K+gYxBLPubVGIoRPQ=
+
+Name: org/zeith/improvableskills/api/client/IClientAbilityExtensions.cla
+ ss
+SHA-256-Digest: 5NsDBNkOLzkoBZNqhcHiufVdIiwoIep+poyXMMa6V4M=
+
+Name: assets/improvableskills/textures/skills/dexterous_arms_hovered.png
+SHA-256-Digest: dvADgpECmUoOUtAHYLspG4v2lcNgGzPvuPTVHhE1Ir4=
+
+Name: assets/improvableskills/textures/skills/template_normal.png
+SHA-256-Digest: C6tRFtNNLXduhGQJ1/0vdfxQxCKsRLzAvRm2TQDdLBU=
+
+Name: org/zeith/improvableskills/api/IDigSpeedAffectorSkill.class
+SHA-256-Digest: qmKtBV2mPf425nJyaNgmdQQv51/rAiv4dWGu1ddWfN8=
+
+Name: org/zeith/improvableskills/api/tooltip/AbilityTooltip.class
+SHA-256-Digest: ZY8RWV+pHD4ynkv+HG+m1arw0gG8nxU+SI5BTb8ccjs=
+
+Name: org/zeith/improvableskills/api/treasures/TreasureContext$Builder.c
+ lass
+SHA-256-Digest: tcXPnb0sUSvp6EYdfxHYZCo+3LTjrrw8gzOSOAq/E0c=
+
+Name: assets/improvableskills/textures/skills/obsidian_skin_normal.png
+SHA-256-Digest: Kk7FcGEqTqIOtQ0NQq2nVIrI1+ENJ9ZECkKy7bTTjos=
+
+Name: pack.mcmeta
+SHA-256-Digest: dlRa/uWiCk0lhEZGccQdxsHnrNPcZ0Kc+xf8Og2piSU=
+
+Name: org/zeith/improvableskills/net/PacketOpenPortableCraft.class
+SHA-256-Digest: 42PZomCZ/0a7Hn6m53a3yoFAH9H2+4DN/1cJmh8zY2c=
+
+Name: org/zeith/improvableskills/init/TagsIS3$Blocks.class
+SHA-256-Digest: XC7b621V2Z7iwXrKLOaZiaFUhf7zYedfcqfYpYgbsv4=
+
+Name: assets/improvableskills/sounds/page_turn_3.ogg
+SHA-256-Digest: wGKsBFEPuKy0mIkCEzvqm+8kyjCLOOIIr1kh5b9f7jc=
+
+Name: assets/improvableskills/textures/gui/skills_gui_overlay.png
+SHA-256-Digest: 8qgiIj3iqNqXyJPVxUXu6jiJjHxPdYpTZ5mHj024Xg4=
+
+Name: assets/improvableskills/textures/skills/alchemist_normal.png
+SHA-256-Digest: c2QpZ5dX4w033+S53FRr3PoeeQBiQl7kQH4vCfZkAZQ=
+
+Name: org/zeith/improvableskills/custom/pagelets/PageletUpdate.class
+SHA-256-Digest: PCOhPVlymPfXfXpMvN1mdi1ttCCwGtLjwUbx/SkAY/g=
+
+Name: org/zeith/improvableskills/client/gui/GuiCentered.class
+SHA-256-Digest: blpmUW7KGD+ZikeDwtgj8faUjt8JTrpV92WB1RfgGq4=
+
+Name: org/zeith/improvableskills/custom/pagelets/PageletNews.class
+SHA-256-Digest: YyF2iPY1o/Hifs/X+1lP0xuxGGUnqVa84IgYVE1b3Kk=
+
+Name: assets/improvableskills/textures/skills/xp_bank_normal.png
+SHA-256-Digest: Ca4uMEbGB+nC397hdciX0tGHkIfI7DSGn3s+ba1PXHA=
+
+Name: mixins.improvableskills.json
+SHA-256-Digest: 0N5Mb/dDmXAws6/OoDQ33O1a6upPcB4xevOhU6tP7e4=
+
+Name: org/zeith/improvableskills/custom/skills/SkillMobRepellent$1.class
+SHA-256-Digest: NNsnikNx0EQygUIMQFBVw5GUn8B5ZNq2LjNRYs+k9lw=
+
+Name: org/zeith/improvableskills/proxy/ASMProxy.class
+SHA-256-Digest: xEm8JF0pNYFg+cYjMPqPht/RC/ZsfNYQJocAakiP12Q=
+
+Name: org/zeith/improvableskills/data/ClientData.class
+SHA-256-Digest: lixjP9VismRHen4yDGr//UUDCV1Ozse5JI2W+2+kpgQ=
+
+Name: assets/improvableskills/textures/abilities/crafter_normal.png
+SHA-256-Digest: 8Qa7kdZ1XhmGt7fZC9Dmv8wDwgCf0RY8Y6up3tgOIJ8=
+
+Name: org/zeith/improvableskills/mixins/Vec3Accessor.class
+SHA-256-Digest: ePXnet2lhLUkbmN9qtR3ja5JWxujU1lKFnGaQK28I8U=
+
+Name: org/zeith/improvableskills/api/SkillCostConfig.class
+SHA-256-Digest: lQ6wKKCdErbkODWj2JSfrVPgy2FrdOytXpDFHV+p8Wc=
+
+Name: org/zeith/improvableskills/custom/skills/SkillCutting.class
+SHA-256-Digest: czjxZmAcSLlfpW0XL81uk/S54DS+mlr0i6ruaY27NwQ=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTETooltip.class
+SHA-256-Digest: hKJXKVoIREgiIYt+D5/8XRzG7rROAWpqa8XMaAjSBx8=
+
+Name: META-INF/mods.toml
+SHA-256-Digest: x8fOGVAvavCgNUe47yHDb24srOhSyCJDOaMdYA6uHXQ=
+
+Name: assets/improvableskills/textures/skills/growth_normal.png
+SHA-256-Digest: eW+Djcutbae1mBUvwYNZpCxbhkHShrzDiCnvZl8kFto=
+
+Name: assets/improvableskills/textures/skills/health_hovered.png
+SHA-256-Digest: gLtNKO3Af6G2+2T9VuSU0L0/KmefQKX/R7KZrfhBLIY=
+
+Name: assets/improvableskills/lang/es_es.lang
+SHA-256-Digest: 6dNxyo00H7aqHvFuHNUMpzzrgLohO7mzm9IRR1gqKP4=
+
+Name: data/improvableskills/loot_modifiers/exclusive_skills.json
+SHA-256-Digest: PXJUBywKOih4J2IAZ4sQXPWvuNbXkCF2biL4Dd6OP2s=
+
+Name: org/zeith/improvableskills/custom/skills/SkillSoftLanding.class
+SHA-256-Digest: PlfP7hVQcJJP6j1WUMGtaLu7Vq7IHUOiuhBqh2kcHz8=
+
+Name: org/zeith/improvableskills/net/PacketSyncSkillData.class
+SHA-256-Digest: XCgYtP1FJ4BsnHttWcd0qALcb/FiZ6WwaXhoanKy8Jg=
+
+Name: org/zeith/improvableskills/init/AbilitiesIS.class
+SHA-256-Digest: Rqyy5RFHUFtAveKg7VxgPPxvn2Xt2my2DhQDe1OimBI=
+
+Name: assets/improvableskills/textures/abilities/auto_xp_bank_hovered.pn
+ g
+SHA-256-Digest: DAUKA6DZMhGKE9mgdI7iBsEq6OMdFSvOwe9ZGe9Ksv4=
+
+Name: assets/improvableskills/textures/skills/attack_speed_normal.png
+SHA-256-Digest: TW2rQNUVO/e8sKBx+QZwuOXbB8dFpILZlAoObCzAsq4=
+
+Name: org/zeith/improvableskills/api/registry/IHasRegistryName.class
+SHA-256-Digest: /AZMmxeB/82qy8xfsEjOMBroLMIDLa2MhZnueqdKRJM=
+
+Name: assets/improvableskills/textures/gui/skills_gui_paper.png
+SHA-256-Digest: zQyGVgmCOFCTAsd/zboM5H12PufaVUkBfYTK2ZswFN8=
+
+Name: org/zeith/improvableskills/custom/skills/SkillAtkDmgMelee.class
+SHA-256-Digest: rhSkCq2RlBQf+jyi7PPNuoW6eP+a+KFhUnN+IrqXdVs=
+
+Name: assets/improvableskills/textures/skills/mob_repellent_normal.png
+SHA-256-Digest: YAZhQTlo0QnufPxhIEQZteOQrvhQt0GskTyDQEGqtsE=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTEXpOrb.class
+SHA-256-Digest: mQ+EPsd6Kou4WbaotXl9dEVwHiBH6JuP3yMtW8BCcN0=
+
+Name: org/zeith/improvableskills/custom/items/ItemCreativeSkillScroll.cl
+ ass
+SHA-256-Digest: Ryz20Hwr8NSppi2A3jc8per3CfX/e9ScPKSpPkxG8go=
+
+Name: org/zeith/improvableskills/init/SoundsIS.class
+SHA-256-Digest: WZbR64h/6uZtpm5zuZ6Hvd/kgc/kvhlxlJdjLP0OtHE=
+
+Name: org/zeith/improvableskills/api/registry/PlayerSkillBase.class
+SHA-256-Digest: xyz6mEvRNjTy9t607TfguLI2skbct4S9R9j0DrpVRqQ=
+
+Name: assets/improvableskills/textures/skills/mob_repellent_hovered_hand
+ s.png
+SHA-256-Digest: UTq3JLSiEAONy5hhFoEDbgRE3lwVy2wDImvziuZSm3o=
+
+Name: org/zeith/improvableskills/api/client/IClientSkillExtensions$1.cla
+ ss
+SHA-256-Digest: Z6OURTxaCCY+f6N8Na2DmR4+FWGkwy7uAoH2tqNLA60=
+
+Name: org/zeith/improvableskills/custom/items/ItemSkillsBook.class
+SHA-256-Digest: D57Yq6ZdHd9OVZRkQctHnx8CYxfMQorq5+jZuqZl7jo=
+
+Name: org/zeith/improvableskills/init/ItemsIS.class
+SHA-256-Digest: TpBKu6GWtZVfqt6Jn532QQbCwODFX+Xd0XqP2B4oxxE=
+
+Name: assets/improvableskills/textures/skills/accelerated_furnace_hovere
+ d.png
+SHA-256-Digest: 0EhjB321fwj21/aIjQNScQSdGEfafhTopCA0HthJN+k=
+
+Name: org/zeith/improvableskills/custom/skills/SkillAlchemist.class
+SHA-256-Digest: 5rhbsVxwRA+5CXEYgw3gBq8uNCPG5B/n23X5t4cqkb8=
+
+Name: assets/improvableskills/lang/en_us.lang
+SHA-256-Digest: xKJGqI5SVDbDPPag/SA79s873WmowUMZLJHMHLgXTjw=
+
+Name: assets/improvableskills/sounds/treasure2.ogg
+SHA-256-Digest: iHvHpz5YiNbh31EzKtIUqVw10YPHWQEWodDGU/u1/c0=
+
+Name: org/zeith/improvableskills/client/gui/abil/GuiAutoXpBank$1.class
+SHA-256-Digest: /mGsCzHGmyDunDUvpG4Fg719RYuKjg5HIrIDyvxMQto=
+
+Name: assets/improvableskills/lang/zh_cn.lang
+SHA-256-Digest: HOei/u2pNJFial6It3AdeJ2rHtJMU+gBjnKZ/sdL7Mg=
+
+Name: assets/improvableskills/textures/gui/discord.png
+SHA-256-Digest: 6DK5DcyMae4vX7gBwmfzm/AToHbwTNDB0T87R+Qzz8w=
+
+Name: mixins.improvableskills.refmap.json
+SHA-256-Digest: jmjjgn/Qz26qq221HyPK8VzY54EB+xj6sWW2fkGlAVM=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTEItemSkillScroll
+ .class
+SHA-256-Digest: bYLA3hEmLA7353VfOw7PNAvj40ucpzyG9zLmDshJbRU=
+
+Name: org/zeith/improvableskills/compat/jei/JeiIS3.class
+SHA-256-Digest: PyO6lhuq9pIte4GsFqqXJy3AcdA6jO+rlstdR9zK9n4=
+
+Name: assets/improvableskills/textures/item/skills_book_master.png
+SHA-256-Digest: LrmDWW2AGVVTgGsbtAecAh8ILvmUExHkH++DHy3Zbx0=
+
+Name: org/zeith/improvableskills/client/gui/GuiBaseBookBrowser$ITxInstan
+ ce.class
+SHA-256-Digest: f+1RBVykASdxQMUXmzwYiUNPe2D9mJGX6QoNbAlEHyQ=
+
+Name: org/zeith/improvableskills/custom/LootTableLoader.class
+SHA-256-Digest: iH0KeJps9SAwqtM+/D6cPjSdPy5pydDaSUm8YJt7Afk=
+
+Name: org/zeith/improvableskills/client/gui/GuiSkillsBook.class
+SHA-256-Digest: JG9CURKyrWTkQaJWRML4lJ422vxrnnyd5o7denREuWo=
+
+Name: org/zeith/improvableskills/api/evt/ApplySpecialPricesEvent.class
+SHA-256-Digest: GKaV1j+KauprMUCXpcMQobT5dE0QKNFFFUQ/Q1gdbZI=
+
+Name: org/zeith/improvableskills/init/TagsIS3$EntityTypes.class
+SHA-256-Digest: KIJIfcbRCRx3kuIS2phuYL//n7WO0fxj8E2PClTnwsI=
+
+Name: org/zeith/improvableskills/api/treasures/drops/TreasureSandDropLoo
+ tTableItem.class
+SHA-256-Digest: OL/7AWhSaHeetFhNoUVC87EQc4lt3Snp1gMsCm5DC4w=
+
+Name: org/zeith/improvableskills/api/registry/PlayerSkillBase$EnumScroll
+ State.class
+SHA-256-Digest: fmNo4S9wNSLQxrUowKtL/NvXq24mw6ZJN9hsM0hPalo=
+
+Name: org/zeith/improvableskills/custom/skills/SkillXPPlus.class
+SHA-256-Digest: mhr83jtyF/cv3B+oxLsEliB1QZQ0CrcJdiLdeS8yIfc=
+
+Name: org/zeith/improvableskills/SkillEvents.class
+SHA-256-Digest: PIKtDg3MCSv3kQxvvwvFBJOsyVcJYEKC11mXQ3IN+P4=
+
+Name: org/zeith/improvableskills/api/treasures/DropUtil.class
+SHA-256-Digest: 4rmXx20rTHvKvUmd5IHq9oDRh+HLa+RK+/X51vmo3EE=
+
+Name: org/zeith/improvableskills/utils/Trajectory.class
+SHA-256-Digest: gTrI2GNB1zE/V72aZJbb8INL1Ld45s4g4nHzqXpCSto=
+
+Name: org/zeith/improvableskills/client/gui/GuiSkillViewer.class
+SHA-256-Digest: XjsGx3Nhe7YjAavkEdiARJtcY1nGQ/ebDDwg3dUmWAw=
+
+Name: org/zeith/improvableskills/client/rendering/OTEffect.class
+SHA-256-Digest: YkcmzCdlh3JOApkwqnSjvcP0WKWMID4ECxQzJZhdn5o=
+
+Name: assets/improvableskills/textures/skills/ladder_king_normal.png
+SHA-256-Digest: AD3A5ROe7CIvZJoRgBxjROo2+xn43Eo3F/s1m0jiMq4=
+
+Name: assets/improvableskills/textures/skills/xp_plus_normal.png
+SHA-256-Digest: JmO0JlWdBOGCDIIroX+XqT3dDosPMb5YLyl2iS0nTyQ=
+
+Name: icon.png
+SHA-256-Digest: 4bo4xmbK0b1GjIqwkv1fNuNfAcCT/z5Au4k0Q330AW4=
+
+Name: org/zeith/improvableskills/custom/skills/SkillAtkDmgRanged.class
+SHA-256-Digest: ZDTdfOerabMxGIY7ZK4MlIlX+rd9QBk4wNt3mKVWEIk=
+
+Name: org/zeith/improvableskills/api/treasures/TreasureDropBase.class
+SHA-256-Digest: +MhXoDl7Aw1FbKUOCVTA1bFEziyweMBwB25YiiO7dDw=
+
+Name: assets/improvableskills/lang/ko_kr.lang
+SHA-256-Digest: IOERgYa9qMwwJe0sqP7S6alPACobv3mXtT7m8YNwhFQ=
+
+Name: assets/improvableskills/textures/gui/enchanting_table_book_1.png
+SHA-256-Digest: PKvJIWR+56+2b7iZiCDqXQCM5thmPuKMv9gGSdyUOOs=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTESkillSparkle.cl
+ ass
+SHA-256-Digest: VUaTCN/2R2JYL295b6a1PIJLWGglA5iNK6dlNTCVGZc=
+
+Name: org/zeith/improvableskills/proxy/ISClient.class
+SHA-256-Digest: xrZqfex9t6k86OPHql4bPKTb255aEgKhe0OUbnMz9Mc=
+
+Name: assets/improvableskills/textures/particle/sparkle_1.png
+SHA-256-Digest: TP7c/AeHXkO2C4bO8ZF7bh+qOujlqVufO2HCfISrSA4=
+
+Name: assets/improvableskills/textures/gui/xp_bank.png
+SHA-256-Digest: Qi9JkEnr47lngOG7WvH02a7/lAzN7gypFDG5aKO4kv4=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTEConfetti.class
+SHA-256-Digest: cbZWZSnSoiUL3u/OKD/GtRDm6JsIJE582cbaHFH4KT8=
+
+Name: org/zeith/improvableskills/api/math/functions/ExpressionFunction.c
+ lass
+SHA-256-Digest: qIic2TjbUC4hH5HXkmpB4hgEkm8dai26eoowAEC07a8=
+
+Name: assets/improvableskills/textures/skills/ore_finder_hovered.png
+SHA-256-Digest: waFdK4yMOtSlkCrhd0Eu1hqDumpSnw+cSv3YUtCGXWI=
+
+Name: org/zeith/improvableskills/custom/particles/ParticleDataSparkle$1.
+ class
+SHA-256-Digest: yZkZw7TwUzeBd+GTUiFULO0kgW3mfERBEvvcMwRQ5J8=
+
+Name: org/zeith/improvableskills/cfg/ConfigsIS.class
+SHA-256-Digest: 5T4aX9zmYk4u9OTVrraKKdfTPOLyYMGK3cLUazefDnU=
+
+Name: org/zeith/improvableskills/api/treasures/drops/Stackable.class
+SHA-256-Digest: afnmmMCm0L8eFGmJ2xX8/6LIGekGvR7sV1vxwq3IW/U=
+
+Name: org/zeith/improvableskills/net/NetSkillCalculator.class
+SHA-256-Digest: fpiejWZYW6BwN9tt4Mo0MdZIZx30pZxphJ1FGdqzfz4=
+
+Name: assets/improvableskills/models/item/scroll_creative.json
+SHA-256-Digest: YgnOOHZULNQpx0UXF0uW+XQRoaapgyj1OncOO/lm6S4=
+
+Name: org/zeith/improvableskills/api/registry/PageletBase.class
+SHA-256-Digest: fUbivX5eEtfVKXqqZs21K7BKbaTXfSDjVWb7MNX6DBE=
+
+Name: assets/improvableskills/sounds/treasure3.ogg
+SHA-256-Digest: vo9vJ36uaXdPABZVFVKFoewlccZXXWrMIXwkhbqx1dA=
+
+Name: org/zeith/improvableskills/net/PacketOpenPortableEnch.class
+SHA-256-Digest: NFfk2c0zV0oypsJpyqyzT2WyhiAUxT7sp4e3hHvnn3Q=
+
+Name: assets/improvableskills/sounds/page_turn_4.ogg
+SHA-256-Digest: Lk7E/CsfG2M6GlKYm/Bq0uGVxbD4AH93swp7f4AwJqM=
+
+Name: org/zeith/improvableskills/api/treasures/drops/TreasureSandDropIte
+ m.class
+SHA-256-Digest: BgLcvtkwpiaJc3yMDhzqEHMAfSfD/7izSfRE03C/dGE=
+
+Name: org/zeith/improvableskills/api/DamageSourceProcessor$DamageType.cl
+ ass
+SHA-256-Digest: 7NPHmQZHX3XwT8ygQ215qwfc03PXlPyeD1ka+6wxcF8=
+
+Name: assets/improvableskills/textures/skills/generic_protection_hovered
+ .png
+SHA-256-Digest: KU2s531fGShVGWK4KGs717/1f/+GkcnlTQAPspFtY9Y=
+
+Name: org/zeith/improvableskills/api/recipe/ParchmentFragmentBuilder.cla
+ ss
+SHA-256-Digest: uUz/baqEe03WUksAszqca6T5TgPB7BuP+cMLpDG158s=
+
+Name: org/zeith/improvableskills/api/registry/PlayerAbilityBase.class
+SHA-256-Digest: eYI9GPo/J+mCbF4OJgW52a32dqb+cvpy3sYJc6OZ+zg=
+
+Name: META-INF/coremods/VibrationSystemHook.js
+SHA-256-Digest: 87QqggeU+onDy8mhtDvDG/QuQadobhDNP0ipa4jwxFw=
+
+Name: org/zeith/improvableskills/client/gui/GuiUpdateBook.class
+SHA-256-Digest: 02g/ppQuz4aMgepvzFi8g85cMoH0C4RbYk1O9WrWp2w=
+
+Name: assets/improvableskills/textures/item/scroll_normal_medal.png
+SHA-256-Digest: 1AHnzuLRaQh+BIpPO/SfUBztSQb1k66ym4LLUZ9rGWM=
+
+Name: org/zeith/improvableskills/custom/abilities/AbilityCowboy.class
+SHA-256-Digest: lqaCLQm+VWJbQbBLuj+85CHYvSTZ94DcWmqbt4ISmfs=
+
+Name: org/zeith/improvableskills/custom/items/ItemAbilityScroll.class
+SHA-256-Digest: nuK6iLW+8LsrbafkmZMcV5viN0ci/GbvqX1eq+0kKgQ=
+
+Name: org/zeith/improvableskills/custom/abilities/AbilityEnchanting.clas
+ s
+SHA-256-Digest: lTTqHsoT2rBP0dXnIulKL9FuBlkctqS6Cj6lRQniulU=
+
+Name: org/zeith/improvableskills/net/PacketSetAutoXpBankData.class
+SHA-256-Digest: yVIO0+6u66CPWkRhoLdkBAqd2lgPftifz786ZCe+DAk=
+
+Name: org/zeith/improvableskills/utils/GuiManager.class
+SHA-256-Digest: vmbPun0kmMs7xwlF5zQsBC2/WdPQq2oV1GB911WMfxw=
+
+Name: org/zeith/improvableskills/mixins/ServerPlayerGameModeMixin.class
+SHA-256-Digest: Vwb4GAdyuLi19mH0W1SwfIz7Nwx7STl5TPOLQyN05C8=
+
+Name: org/zeith/improvableskills/custom/abilities/AbilityCrafter.class
+SHA-256-Digest: z9bB+7yiPCo89sbg1u3yWSt55VznHl0hUHC5H20FVzQ=
+
+Name: org/zeith/improvableskills/api/loot/RandomBoolean.class
+SHA-256-Digest: 0c1a4CmGcxDXSM4RCSkFSF2mEqsWmIrJsqdPHN/UOWY=
+
+Name: org/zeith/improvableskills/mixins/EnchantmentHelperMixin.class
+SHA-256-Digest: L25hJr3/YcymjBPv/fp/yeNGzOg2CihCuiBubqW18Iw=
+
+Name: org/zeith/improvableskills/api/treasures/DropCondition.class
+SHA-256-Digest: rhM4254a4YT2DsPl9pT1/sqXj6Od+r47baGZ6vTkSwI=
+
+Name: org/zeith/improvableskills/compat/jer/JerIS3.class
+SHA-256-Digest: yqUQqbDixM9zvGIzBmU+Lu11tgM20m/lpSYlVNKV4mE=
+
+Name: assets/improvableskills/textures/skills/generic_protection_normal.
+ png
+SHA-256-Digest: H9ndfAPT7HllwyVhPQcKBdSFSZL4sG4TOrYHOCGpVuY=
+
+Name: org/zeith/improvableskills/client/rendering/OnTopEffects.class
+SHA-256-Digest: P5TE7q5EeSrEkNBsmWjGTUd794lhaQiec8P5CMhzfP4=
+
+Name: assets/improvableskills/textures/skills/huckster_normal.png
+SHA-256-Digest: KgdwrL7sssUUTQjWSCXFVYwNVWa8zLKaG+6HB//wr5s=
+
+Name: org/zeith/improvableskills/api/PlayerSkillData.class
+SHA-256-Digest: PUQq9EvG7FH7Fa3sClupIKe69pozxfhXT1+9oTLIgGU=
+
+Name: org/zeith/improvableskills/custom/skills/SkillTreasureSands.class
+SHA-256-Digest: sguEG/v7KK0pUWKqTDlK0cVeVsX29tsrrCftIleXI/k=
+
+Name: org/zeith/improvableskills/client/gui/GuiAbilityBook$AbilityTxInst
+ ance.class
+SHA-256-Digest: Gznd3UoN/AQrPvt3M7k7+g0/cVjz+hcHTxlMY7vH8dE=
+
+Name: org/zeith/improvableskills/client/gui/abil/ench/ContainerEnchPowBo
+ ok.class
+SHA-256-Digest: SiQOmmcBPxyiYvXcdmaoApSNoPd/VEFPyQcPpCg7bwQ=
+
+Name: org/zeith/improvableskills/custom/abilities/AbilityAnvil$1.class
+SHA-256-Digest: 0R5Gps41+hC0yBhMZ+v0Mr4+03gQycXuMmsKdAGYgM8=
+
+Name: assets/improvableskills/textures/skills/health_normal.png
+SHA-256-Digest: L4aSMcb8GDqmHSRInpXWCzTLJEY9KY6N6U/c/Tu+66I=
+
+Name: assets/improvableskills/textures/abilities/template_hovered.png
+SHA-256-Digest: QG5InxvVDCTlkS576TqmIZKg+cGulDjYwLQkLcHTEv8=
+
+Name: assets/improvableskills/textures/skills/enchanter_hovered.png
+SHA-256-Digest: MrhV1zt/YJQJew6laWFweJxMraNEMZ5dOyQR/u7qFHw=
+
+Name: org/zeith/improvableskills/custom/skills/SkillGrowth.class
+SHA-256-Digest: svx1miWHgafHJiErTrzhp4mv1gC2ts93rwDcBJIA3I8=
+
+Name: org/zeith/improvableskills/client/gui/abil/ench/GuiEnchPowBook.cla
+ ss
+SHA-256-Digest: w9eeqyF7nSAxjRmhcjpvl1O+YIPYxOFM4tGZTrs1xh8=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTEItemAbilityScro
+ ll.class
+SHA-256-Digest: uEkTtM3hMr1lc+poTQldm301dBFADHH0nMTPPIyGEQw=
+
+Name: assets/improvableskills/textures/gui/book_slot_overlay.png
+SHA-256-Digest: itXJkKqoWuF6Zq/V6OL8OOPcZN6f1yD/8yvKkXiXgX8=
+
+Name: assets/improvableskills/textures/skills/alchemist_hovered.png
+SHA-256-Digest: AdzbnHc/W4uJu3R9ekl4Jwa/kmkvzJHjD4Xo+WowJr4=
+
+Name: org/zeith/improvableskills/init/RecipeTypesIS.class
+SHA-256-Digest: p/0NDN7FaEu4EnT3GBnAlBsiWagTWdjMdjuG87LYyfI=
+
+Name: assets/improvableskills/textures/skills/atkdmg_ranged_hovered.png
+SHA-256-Digest: kPFUyQd8itxYah6uoL2DSuiiY6VHU9s2N/yk3LWcdrs=
+
+Name: org/zeith/improvableskills/command/CommandImprovableSkills.class
+SHA-256-Digest: bBfvR5zM1JjByxgNREVF0Ff52V7FQg3dK6FXEr2qetM=
+
+Name: org/zeith/improvableskills/api/recipe/Is3RecipeBuilderExtension.cl
+ ass
+SHA-256-Digest: cvzlJQXltS8zgBFWYWq0X5YEOwUrsu4ucpvI21c1eqw=
+
+Name: org/zeith/improvableskills/custom/skills/SkillSoulSpeed.class
+SHA-256-Digest: kQZLnBkmAXgnfiLK57PvqPZ4d+glmsHFctxZO/hP20w=
+
+Name: org/zeith/improvableskills/utils/loot/LootConditionSkillScroll.cla
+ ss
+SHA-256-Digest: 2wnXG/V00XzCjp7Us4dhpJU8MJYS0mycBNx6A20sRFw=
+
+Name: assets/improvableskills/models/item/scroll_normal.json
+SHA-256-Digest: Wl50h+ilWxSdwEmnWqsfTkJgu8sxQH18m+LrlMMw20I=
+
+Name: org/zeith/improvableskills/api/loot/GlobalSkillLootModifier.class
+SHA-256-Digest: CmNI27fgC3AAEZ5sqMprveu3beJyJJEaYRkZZc717u8=
+
+Name: org/zeith/improvableskills/net/PacketStoreXP.class
+SHA-256-Digest: o5ZeqWnwoSDFXgewhP4rS4ervEj7vPQt1D4VSUaQMV8=
+
+Name: assets/improvableskills/textures/skills/atkdmg_melee_hovered.png
+SHA-256-Digest: cNPXJs+G/lqfWPgYFVYuIrVcO/Vb79JhgzqrL4RYp3g=
+
+Name: org/zeith/improvableskills/custom/items/ItemParchmentFragment.clas
+ s
+SHA-256-Digest: ByWb6buvobhlw7QdCZAquSshAXe5tw4FyxiCA5JHR2w=
+
+Name: org/zeith/improvableskills/client/gui/abil/ench/GuiPortableEnchant
+ ment.class
+SHA-256-Digest: 5jQCdyAqb6gJTtDo7TcXT2zTW0CJ5pArrClcEPOi3K4=
+
+Name: assets/improvableskills/textures/skills/atkdmg_melee_normal.png
+SHA-256-Digest: OKUizQanT9q+RgWMH0rVJxJ+aAfB5Vxua0aH/Br3j6k=
+
+Name: assets/improvableskills/textures/skills/luck_of_the_sea_hovered.pn
+ g
+SHA-256-Digest: DbfubOga9YsVGEURQA7QHaZr9oiKPOStEmmtu0+q3rI=
+
+Name: META-INF/coremods/ItemStackHurtHook.js
+SHA-256-Digest: eKy+Vj5fNdIrX7p7GOCPF6jxb1FW639k7FZoMhjBG1E=
+
+Name: assets/improvableskills/textures/abilities/cowboy_normal.png
+SHA-256-Digest: iVUahTKI6EJT/QKZR4bqJlwqGiqMjsqj0SFd0G/tMeQ=
+
+Name: assets/improvableskills/textures/item/scroll_ability_overlay.png
+SHA-256-Digest: AKyruVZENtbGcuy2Dj7qrLPY2xOQwIHnrOiRjtBzsQM=
+
+Name: org/zeith/improvableskills/client/gui/abil/GuiMagnetism.class
+SHA-256-Digest: LMddfGU6MpXiMoDid14jrIxdM8vDuz3akhaXJu6eWHc=
+
+Name: org/zeith/improvableskills/utils/TileHelper.class
+SHA-256-Digest: tme8aU5cWT4D8+TFy/e4jtKOHA3OLqEQizuql1r473g=
+
+Name: assets/improvableskills/textures/gui/auto_xp_bank.png
+SHA-256-Digest: TQdwflS+f8WvL/1KDsxYbTEnYhc2iZv6bglpRAL5Idg=
+
+Name: assets/improvableskills/textures/skills/mining_normal.png
+SHA-256-Digest: yumJWXY+cks0ymOniau45t+0yQmPecELYxa1Dsq6VFw=
+
+Name: assets/improvableskills/textures/abilities/magnetism_hovered.png
+SHA-256-Digest: RMCp7w+b/FpVg90cYNcA98iENnSpjJA/WBL0KFXNG+8=
+
+Name: assets/improvableskills/textures/skills/ender_manipulator_normal.p
+ ng
+SHA-256-Digest: aOiddzSE1ihwuf+3GJfjjgjeMBuMdIAjIeq6+aiksxw=
+
+Name: org/zeith/improvableskills/client/gui/GuiNewsBook.class
+SHA-256-Digest: 2OQ/a00xxhCSduT0nyo5LmsVCq6r1x1rNcfsPb/sQHQ=
+
+Name: org/zeith/improvableskills/client/gui/abil/anvil/AnvilMenuPortable
+ .class
+SHA-256-Digest: xnO7U4RbsaGGU7EJvRRPvhg2kTMZ4y36r1C6avIPzpo=
+
+Name: org/zeith/improvableskills/net/PacketSetMagnetismData.class
+SHA-256-Digest: 1L/d9BmUvQByfjyngwZB91+NQtAhwuF9oVQ66sXpw4w=
+
+Name: assets/improvableskills/sounds/page_turn_1.ogg
+SHA-256-Digest: LFNf/xLBK1cK3I9ZPTYrgV9aufqzyZHnWXINutAhhfs=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTESkill.class
+SHA-256-Digest: cpb2OBATecZga90QmjeeH+IeAHpX8rnMeMRDZIK3DDg=
+
+Name: META-INF/accesstransformer.cfg
+SHA-256-Digest: napiVohNbfCp/mFmObO3OoDK0LGl8TytvGb+gsO7N7Q=
+
+Name: org/zeith/improvableskills/init/TagsIS3.class
+SHA-256-Digest: AR4Xh270wBKFjJ+V2OrXshW1R26+GE/8ORlWPUO159U=
+
+Name: assets/improvableskills/textures/abilities/enchanting_normal.png
+SHA-256-Digest: u+GEn7OvA4ysC8ncQRmNgPO5O3rxR4S9efqFHnofOxw=
+
+Name: org/zeith/improvableskills/SyncSkills.class
+SHA-256-Digest: HzuhbcYeIKyPZG3jsP1lbabBqw5cIVH73yOY9PukZno=
+
+Name: org/zeith/improvableskills/net/PacketOpenSkillsBook.class
+SHA-256-Digest: yT2LxZtrYUNpY70FcLP48ZP2s2YaJ4D/Qizt+aCcgW0=
+
+Name: org/zeith/improvableskills/api/evt/CowboyStartEvent.class
+SHA-256-Digest: mv52PDRf3MNJtUcQUfQVRi33cvwonWaKWKriE6V1Zys=
+
+Name: assets/improvableskills/textures/skills/digging_normal.png
+SHA-256-Digest: /QPvlr0crDJxxL6w89ath+ME6wLNV8iQM5zfM9uL4y4=
+
+Name: org/zeith/improvableskills/client/gui/base/GuiTabbable.class
+SHA-256-Digest: qg6CS2P4NM+aEBML2uHbnYLMg8xJhKojCWGO9CVuPgc=
+
+Name: assets/improvableskills/lang/ru_ru.lang
+SHA-256-Digest: Ga1abnwgeMNI7yw7nrbRmCXJgsSH1v0UgYiLU8oMZhI=
+
+Name: org/zeith/improvableskills/api/IGuiSkillDataConsumer.class
+SHA-256-Digest: 5NBQeUqFjD91wyJhKem99DvLdj+vpx4GKlzRMCLRY18=
+
+Name: org/zeith/improvableskills/api/evt/VibrationEvent.class
+SHA-256-Digest: +a+8KZtFusvWg9muHunz6AAN/vdGcmAk75hvK3qqgk8=
+
+Name: assets/improvableskills/textures/abilities/enchanting_hovered.png
+SHA-256-Digest: pLIRL1KMCTgvLweDmmWJ2QRT/k+kkvMp28+MrG0kAjs=
+
+Name: assets/improvableskills/textures/skills/attack_speed_hovered.png
+SHA-256-Digest: 0qq+taPHpw52EJewK3bpS8RaNBoDagqz5CpT0c6b6jk=
+
+Name: assets/improvableskills/textures/skills/ladder_king_hovered.png
+SHA-256-Digest: JUVMmnA3NdETNEArLu3n2RUe+XHu02uBgPumM/fQRBI=
+
+Name: assets/improvableskills/textures/skills/leaper_hovered.png
+SHA-256-Digest: APHBWEpY7lF7xyWU7ScICph/m+1r0eYaRV6Rz4TzIoQ=
+
+Name: data/forge/loot_modifiers/global_loot_modifiers.json
+SHA-256-Digest: L1c1yAcWsEdybrVMuE/rWPbvQWnFlieBzoTsR0m2WsQ=
+
+Name: org/zeith/improvableskills/net/PacketSetCowboyData.class
+SHA-256-Digest: 43RbfzMrtwrsbe+T013FeejZISpp9+2qqTq0wVTbQaE=
+
+Name: org/zeith/improvableskills/api/math/functions/FunctionMath.class
+SHA-256-Digest: pYGkFIVsFRbJZbux3ENzi38Ypj6x3UrX+tNDX4y7MGw=
+
+Name: org/zeith/improvableskills/ImprovableSkills.class
+SHA-256-Digest: 9h1xbdWgskUQsQYsovaxTB5XCc9WcS+bvQpdTznsLhg=
+
+Name: assets/improvableskills/textures/skills/template_hovered.png
+SHA-256-Digest: QG5InxvVDCTlkS576TqmIZKg+cGulDjYwLQkLcHTEv8=
+
+Name: org/zeith/improvableskills/custom/skills/SkillLeaper.class
+SHA-256-Digest: U6Ua7dRatk8OQgsBLBtj4PPVlR06tAUnHq/fWjb1Jos=
+
+Name: assets/improvableskills/sounds/page_turn_5.ogg
+SHA-256-Digest: aWwZZc3lcEbZ+jdSVXHvxE5HSVwQBzUPGEc0aDT7Hms=
+
+Name: assets/improvableskills/textures/particle/sparkle_2.png
+SHA-256-Digest: voah/tmCZ0VA8sFZWhxVW9lA6eAUNgMrS3xyelM7w3k=
+
+Name: org/zeith/improvableskills/custom/skills/SkillMining.class
+SHA-256-Digest: X1iLS0gS4cgGSk6cjWLAx1HmkvTomOYM9kdX3fnj+aw=
+
+Name: org/zeith/improvableskills/api/math/ExpressionEvaluator.class
+SHA-256-Digest: g750TmLWb2WCBpJi6Tu55TtZPblzvx3kY0AYPkpBGks=
+
+Name: assets/improvableskills/models/item/skills_book.json
+SHA-256-Digest: ROHJ52EKlXPzNfuUsfKXh63pQe0WUyuK5HkHD6AqiyQ=
+
+Name: org/zeith/improvableskills/api/OwnedTexture.class
+SHA-256-Digest: 0Ppb+yraR23zR+qFbK8nAt1MGWCM1yxJoc2AwvQ0qT4=
+
+Name: org/zeith/improvableskills/custom/skills/SkillLuckOfTheSea.class
+SHA-256-Digest: XN1JebmGXDPk/8PviU+LguKcyLfCQjBoic/Qy+2f1mE=
+
+Name: assets/improvableskills/textures/skills/soul_speed_hovered.png
+SHA-256-Digest: WLAg0rNmzUbx0QJC1gpJcealEngUhrSJgTLw9wEujgQ=
+
+Name: org/zeith/improvableskills/api/evt/DamageItemEvent.class
+SHA-256-Digest: bp37IF5524gHnTkqrdZvEJ8juQ7NoselGd/ntAko/7E=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTEBook.class
+SHA-256-Digest: mBZe+E5Ux6/Z8xda6zqfYpit6YbLxIdg5xfP/omrDFE=
+
+Name: org/zeith/improvableskills/proxy/ISServer.class
+SHA-256-Digest: BvBEQZQSY7eaKE6BNO0diYhy8QOZWzZc5RyB6tZ8DzM=
+
+Name: assets/improvableskills/textures/skills/fast_swimmer_normal.png
+SHA-256-Digest: VMNR2CflohDBFbKBEcynX2gxRJTQIqmogBYPNbiAZCw=
+
+Name: assets/improvableskills/textures/abilities/template_normal.png
+SHA-256-Digest: C6tRFtNNLXduhGQJ1/0vdfxQxCKsRLzAvRm2TQDdLBU=
+
+Name: org/zeith/improvableskills/custom/skills/SkillAcceleratedFurnace.c
+ lass
+SHA-256-Digest: ulYNxt9KzWztDOAVtkl15OZmRg5a+QfAg2xudvbwj4M=
+
+Name: assets/improvableskills/textures/skills/ore_finder_normal.png
+SHA-256-Digest: CgDuQsMSnA/x61wgvCuFEO7Ze6oJBzU5x09yTKrIpWw=
+
+Name: org/zeith/improvableskills/api/tooltip/SkillTooltip.class
+SHA-256-Digest: GTXo9tnxvrORup01ZuYIFbFBlReHUd+lH9oT2KeORiI=
+
+Name: org/zeith/improvableskills/custom/items/ItemSkillScroll.class
+SHA-256-Digest: HHrqwSG+6ZCz/28VGwx+a/bESBT3ThxmOTOjLC2E/DA=
+
+Name: assets/improvableskills/textures/abilities/auto_xp_bank_normal.png
+SHA-256-Digest: kBaB0HIXbiqUQx76ZkjFocjPhVvzn1gyNijZ1HhTrXY=
+
+Name: assets/improvableskills/textures/skills/mob_repellent_hovered_no_h
+ ands.png
+SHA-256-Digest: w2yLIUlgz3tpWzp0Mg9DR7Czmh62aRwMyg8JOWUWs8M=
+
+Name: assets/improvableskills/textures/skills/dexterous_arms_normal.png
+SHA-256-Digest: lVQHH7nnlaUVmMMV+DE4gOzgN/RX6NPDJDJ6cO0w1qg=
+
+Name: org/zeith/improvableskills/api/recipe/RecipeParchmentFragment.clas
+ s
+SHA-256-Digest: gx+C/O9h1oE235v2PqEpixxElTtWiva/aDTaN9Yul24=
+
+Name: assets/improvableskills/textures/skills/xp_plus_hovered.png
+SHA-256-Digest: 7jaoALR/xg9c6hYS2LT79yi6Y/1TQvOxLI4Dzm+uPFY=
+
+Name: org/zeith/improvableskills/client/rendering/particle/SparklePartic
+ le$Provider.class
+SHA-256-Digest: RhjXN9c5yxhFEDA9y/21RlRIghdnb5h3KGD3aDql2TU=
+
+Name: META-INF/coremods.json
+SHA-256-Digest: LfFwnV5koUf7EcG/kOjojcvSTi2mNxCl2TnQOC/INoM=
+
+Name: org/zeith/improvableskills/init/SkillsIS.class
+SHA-256-Digest: acQylMfY6vKvtWsiIvzTjqauXUpquxDDB7O6U5IGIZA=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTESparkle.class
+SHA-256-Digest: x0Hv2blUXm1hY1yGOcopCmhP//BG1z94t9jhit5D5b0=
+
+Name: assets/improvableskills/textures/skills/cutting_normal.png
+SHA-256-Digest: GmeKJYyXR9tFm61j0mkIWqKvLvhmd1VclVCByW+ZQRs=
+
+Name: org/zeith/improvableskills/api/client/IClientAbilityExtensions$1.c
+ lass
+SHA-256-Digest: DKD8tdfi+UEL88BNJh27YzRI57fyOkwn/on7GxWjOyE=
+
+Name: org/zeith/improvableskills/client/gui/GuiXPBank.class
+SHA-256-Digest: M1vD1dkMuJyXhMSGFTNPteY8wbJxt+0ZQOn67C4gNBM=
+
+Name: org/zeith/improvableskills/net/PacketScrollUnlockedAbility.class
+SHA-256-Digest: v6vhTOYZkIvufAJs+z7z6Tovjzu3Ez/Mw9D41CLUaKg=
+
+Name: assets/improvableskills/textures/skills/mob_repellent_normal_no_ha
+ nds.png
+SHA-256-Digest: bL+nUNa3N3d/LggCYiaK5eaXTqiSGkBXzWt1357h0mM=
+
+Name: org/zeith/improvableskills/client/gui/abil/ench/ContainerEnchPowBo
+ ok$1.class
+SHA-256-Digest: YoXMpiYi8OfuYiOkdS0lVGGZDexcJ69OxfzoFAQ43V4=
+
+Name: assets/improvableskills/textures/abilities/anvil_normal.png
+SHA-256-Digest: gu+ZmPiUL8bBTB2+kPP3rk642o70G/IUU4egEOs6x9A=
+
+Name: org/zeith/improvableskills/client/gui/abil/ench/ContainerPortableE
+ nchantment.class
+SHA-256-Digest: 0UE2RICtWGE8KxgzGddl+2iavQUT5xKaud/nqOjuhjo=
+
+Name: org/zeith/improvableskills/custom/skills/SkillEnchanter.class
+SHA-256-Digest: xdw7ceYxI2hSqeq3oLePTDXXdl9LPjOr0+HEr4L3ZSI=
+
+Name: org/zeith/improvableskills/net/PacketOpenPortableAnvil.class
+SHA-256-Digest: qYAMyyY6ZZoGLHBqLDCnuMG5zcXv+TJpvON1/vPyhaE=
+
+Name: org/zeith/improvableskills/init/PageletsIS.class
+SHA-256-Digest: 07OCt0JrEvNmzC5pjgO9PpkwyIJcqFVXL4Bfo5ytsvo=
+
+Name: assets/improvableskills/textures/skills/cutting_hovered.png
+SHA-256-Digest: 6wAFcA2WJoxBWhf/XZeB4Aa/4ww9RNFrW8GHmIBAeG8=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTEFadeOutButton.c
+ lass
+SHA-256-Digest: dr5E8QZrffVPF2ttL7Nh0HpqG9mBXQ/cIJoh6/U10SY=
+
+Name: org/zeith/improvableskills/data/PlayerDataManager.class
+SHA-256-Digest: Zb3vRuT8H/ypJW491jAeROi9Y8YoS8bvm9pIMPGajLw=
+
+Name: assets/improvableskills/textures/abilities/magnetism_normal.png
+SHA-256-Digest: CeaKUYnGovrs5FLNFQiNzmrrnHGmQg1Qlxywzp9czf8=
+
+Name: org/zeith/improvableskills/custom/skills/SkillDexterousArms.class
+SHA-256-Digest: w9Y8D9i6d6bAe5DdhdFya3cdth8QT+uAvs9No5T03EY=
+
+Name: org/zeith/improvableskills/custom/abilities/AbilityMagnetism.class
+SHA-256-Digest: AI4btXeq3g4Sc2YEbIbnATr6P/hhwfj7VTZaTk9jQI4=
+
+Name: assets/improvableskills/textures/skills/atkdmg_ranged_normal.png
+SHA-256-Digest: /VadWLgPdRQLmGCnVz9PWouM44FvcRveG035sjqjOlY=
+
+Name: assets/improvableskills/textures/skills/obsidian_skin_hovered.png
+SHA-256-Digest: xSClBnJeRZEIaQpJN7wCzYd6MISS+7dkWiqGFNPHbr8=
+
+Name: assets/improvableskills/textures/item/scroll_normal.png
+SHA-256-Digest: NMz4CJsSghaHLnMBj6XzwLZde8T7e4H2rijQBP69uNI=
+
+Name: org/zeith/improvableskills/custom/pagelets/PageletSkills.class
+SHA-256-Digest: PQOFvmkZ9VU8+0TManMYFtf7EGL1q8Td1QY900W+EXA=
+
+Name: org/zeith/improvableskills/api/treasures/TreasureContext.class
+SHA-256-Digest: UC/bGWrB3qYCBNfp962YkD6NeI7ghTDnbBpVBAV/wKk=
+
+Name: assets/improvableskills/particles/sparkle.json
+SHA-256-Digest: Yq145oh/lxeculsQqXPC1Ob1Cp4TZLX+h3yNG9Jh1kk=
+
+Name: assets/improvableskills/textures/particles/sparkle.png
+SHA-256-Digest: mzCO6E64R+CG5cOqnxWrg5k/Cvhfqf5vdOVl2Z2uR/o=
+
+Name: assets/improvableskills/textures/skills/treasure_sands_normal.png
+SHA-256-Digest: vdCf2+Dn0hic+A5mmqgXGuw+rqmWZY5TzmDxOWrvdAk=
+
+Name: org/zeith/improvableskills/custom/skills/SkillDigging.class
+SHA-256-Digest: 5uK6dYpTyFrr19EjMzPias8HguRo0mlecsPS/11RRWc=
+
+Name: org/zeith/improvableskills/net/PacketLvlUpSkill.class
+SHA-256-Digest: kaOaGZ/WDqclkStsLKH1BrJ3FA9XAOqS7YgJzZh/ERs=
+
+Name: org/zeith/improvableskills/net/PacketScrollLevelupSkill.class
+SHA-256-Digest: qyNMr6gX9fwF8Iqichr78FSfmDcrhd+32H1feuNMjts=
+
+Name: org/zeith/improvableskills/api/treasures/TreasureRegistry.class
+SHA-256-Digest: 0fBCJ2cBxPz6Qe1OFoNDA4RmBHTRtC7hgiYgs63zy8g=
+
+Name: assets/improvableskills/textures/skills/luck_of_the_sea_normal.png
+SHA-256-Digest: B9w4UFx2uASZvLmO/lTjBZIADyxdoRv/QQtGl9KbKjI=
+
+Name: org/zeith/improvableskills/net/PacketScrollUnlockedSkill.class
+SHA-256-Digest: m8nYDiOpySeoftgKE69nl8mvsE1CPfhHzmeiQpe2/oM=
+
+Name: assets/improvableskills/textures/gui/icons.png
+SHA-256-Digest: o54XwNyM5BCAkvjN/n8eBpq2Un7yjqX96uuwXLF4KUc=
+
+Name: assets/improvableskills/logo.png
+SHA-256-Digest: 4bo4xmbK0b1GjIqwkv1fNuNfAcCT/z5Au4k0Q330AW4=
+
+Name: assets/improvableskills/models/item/scroll_special.json
+SHA-256-Digest: 4KOldybNSQAYJIzURVd2HBEfxlHduh17TtE58FdhTNc=
+
+Name: org/zeith/improvableskills/custom/skills/SkillPVP.class
+SHA-256-Digest: 7WoEm9w8WZVSagTA4MU+KPT71eqhofs0ITVEWF+LNPA=
+
+Name: assets/improvableskills/sounds/page_turn_2.ogg
+SHA-256-Digest: EVonNjtLXPIAc43lgTwY042U1yoRGIiv0VEE+lTZ0eM=
+
+Name: org/zeith/improvableskills/init/GuiHooksIS.class
+SHA-256-Digest: pGxtIHKnWqMhnXT/lJDLowcbfE9YSnaVrqGLN7/KSWQ=
+
+Name: org/zeith/improvableskills/custom/abilities/AbilityAutoXpBank.clas
+ s
+SHA-256-Digest: HXygSJL41HXQ8w2YACJRsSrpOPm73xfgaP7gh0PPDsU=
+
+Name: org/zeith/improvableskills/custom/skills/SkillHealth.class
+SHA-256-Digest: 2SVE4IqccddLTIcY0IDsbtYNlx5CYHgS6vASoMXU4GM=
+
+Name: assets/improvableskills/textures/item/scroll_creative.png
+SHA-256-Digest: /fphVopydvc9dHc0m3b76xN2rAkkK0Va1/OLepbbWcM=
+
+Name: org/zeith/improvableskills/custom/skills/SkillGenericProtection.cl
+ ass
+SHA-256-Digest: +sdtWDKjbHXapAIMc5BZEUObBBufmCljkByLRULC2d0=
+
+Name: assets/improvableskills/textures/skills/soft_landing_hovered.png
+SHA-256-Digest: pT4OYtX/85HMQ/MoToSnnjwb457OyRaW2GbkTK+8xsQ=
+
+Name: org/zeith/improvableskills/command/SuggestionProvidersIS3.class
+SHA-256-Digest: TVCB+aa/Jr1RxPgvMhWWo33sqwBPnJZmprdqK4e3qFI=
+
+Name: org/zeith/improvableskills/custom/skills/SkillHuckster.class
+SHA-256-Digest: Qtl+YmMnHxatZhooUrEmPomTorRsJp+qccIpc82OnzQ=
+
+Name: org/zeith/improvableskills/mixins/BrewingStandBlockEntityAccessor.
+ class
+SHA-256-Digest: YJt3voG804z/lzZsmZ4DqJHOXaTfVi4eZaylGTvXSOQ=
+
+Name: org/zeith/improvableskills/mixins/WanderingTraderMixin.class
+SHA-256-Digest: a+l+xQIPQmn/aDVfnumgBH5DB1n5dzqkmPSvF+tW+Po=
+
+Name: assets/improvableskills/textures/skills/mining_hovered.png
+SHA-256-Digest: 7DTr9BU9dOxxonO8hsZmR11pyLbdORP2qhH6T/AtBiU=
+
+Name: assets/improvableskills/textures/item/parchment_fragment.png
+SHA-256-Digest: EC3Et78Q1CV37GLEhSOyT8Ii1P6V6XfmpOBW8rVmQzM=
+
+Name: assets/improvableskills/textures/skills/accelerated_furnace_normal
+ .png
+SHA-256-Digest: gOBhlrWPFNsKXayd5o4UtbH+F5XguoaG5P9F7HjYXqA=
+
+Name: assets/improvableskills/textures/skills/xp_bank_hovered.png
+SHA-256-Digest: BpAErZbuqnSR/2P8eKKdxNfPtcVVpwp7WIblTPSkINc=
+
+Name: org/zeith/improvableskills/client/gui/GuiAbilityBook.class
+SHA-256-Digest: 7avH8Bf1Z0gIC3B5z0c+8NgdOT/Slgi4ceXVEReDHy8=
+
+Name: org/zeith/improvableskills/net/PacketDrawXP.class
+SHA-256-Digest: nTzl1WCw2hvl/YBUyYxRmlOh42P+zD/FcntPFit7/Sg=
+
+Name: assets/improvableskills/textures/abilities/cowboy_hovered.png
+SHA-256-Digest: qBYIGU4ucYdYMzrFqc4Y5cZZqirKiN4Mam66ESzsrYo=
+
+Name: org/zeith/improvableskills/compat/jer/ConditionalComponent.class
+SHA-256-Digest: Uo/Pk2BynOQrCQIhl0UMifOqGZDQciE9YH9DFSJKSKo=
+
+Name: org/zeith/improvableskills/custom/skills/SkillObsidianSkin.class
+SHA-256-Digest: Q4fAd8+yL6m1QY2zS/PRaxGOwb5UrrU/DQaeITTqGsQ=
+
+Name: org/zeith/improvableskills/api/loot/SkillLoot.class
+SHA-256-Digest: JsIJW4o1mAv7g8hlnwfrR1VmNcXfdhG1trZcW4RA1BU=
+
+Name: assets/improvableskills/textures/gui/magnetism.png
+SHA-256-Digest: XSTWhB3gP3mwbCN3gsEMRUWiMKIHw9cNA9qDHxgoc0s=
+
+Name: org/zeith/improvableskills/custom/skills/SkillSilentFoot.class
+SHA-256-Digest: 7XOdbPuuFrbgMn/sCSnyF0wt2BrgBRQMsxMzUjAju78=
+
+Name: assets/improvableskills/textures/skills/fast_swimmer_hovered.png
+SHA-256-Digest: KIZ58kxqX5mC2fMfY/gctgcmI4cQUElpeqNtcsyykT4=
+
+Name: assets/improvableskills/textures/skills/huckster_hovered.png
+SHA-256-Digest: 0IHdkmavhIOYCawmZdYsNvwVRobd+WUTAIHQiuobPN0=
+
+Name: assets/improvableskills/textures/skills/pvp_hovered.png
+SHA-256-Digest: 3bO/t8FVmhFXPlqh0/PdqLiJRRk5/JbxNB3GjHagnFI=
+
+Name: org/zeith/improvableskills/client/rendering/ote/OTEAbility.class
+SHA-256-Digest: FKj/1FLan1QgwrOntw4rOfRVgS2apHWDBrOBZha3UaQ=
+
+Name: org/zeith/improvableskills/custom/particles/ParticleDataSparkle.cl
+ ass
+SHA-256-Digest: 4ZvXuPysEsSaFdZM/dJmsB1N/P5w8hc8WDWWj/kU53w=
+
+Name: org/zeith/improvableskills/custom/skills/SkillAttackSpeed.class
+SHA-256-Digest: +CzrrXeIxw9h3PntTxBbzKqItoV7gDZE+QHXYXyWBXk=
+
+Name: org/zeith/improvableskills/init/ParticleTypesIS.class
+SHA-256-Digest: LyRxqsuoGf39nHVQOIgtUQwc+E2sisS+WatmICgN7YU=
+
+Name: org/zeith/improvableskills/custom/skills/SkillLadderKing.class
+SHA-256-Digest: TQOwD6xPNyQNnaWuTfMI+LvkPv06C3fvlJRphXuPtxw=
+
+Name: org/zeith/improvableskills/api/evt/HarvestDropsEvent.class
+SHA-256-Digest: Ozi9BUMer7EFj76G4M+0D0fZ+Z94qEgcF7Sqvd0VFcM=
+
+Name: assets/improvableskills/textures/skills/silent_foot_normal.png
+SHA-256-Digest: V7yfEwPHJmsWdiaIJmNcsnZXG9jOgbOKdVEUSVtFrNc=
+
+Name: org/zeith/improvableskills/custom/skills/SkillMobRepellent.class
+SHA-256-Digest: mV577c+qk7EmVw3vZiZxuaRdBTbYdReo/OvZ8aPj9gU=
+
+Name: org/zeith/improvableskills/api/recipe/RecipeParchmentFragment$Type
+ .class
+SHA-256-Digest: QdHo3D6gKTdL5si1AudO0265jHp+KUo57/UGZGJY3RU=
+
+Name: org/zeith/improvableskills/net/PacketSetSkillActivity.class
+SHA-256-Digest: MQs0b2VZyyyTPgxXB5PWc5+4F74sCi47INUZlXrrreY=
+
+Name: assets/improvableskills/textures/skills/silent_foot_hovered.png
+SHA-256-Digest: wG88rmmCEX5vIyNx8IJSapdtW25FeycG032l7f++jC0=
+
+Name: org/zeith/improvableskills/client/gui/GuiSkillsBook$SkillTxInstanc
+ e.class
+SHA-256-Digest: WQ7rBxpmdMiZ+nYsuNbyQdzF1WQieBfM6ywUTeFBGk8=
+
+Name: assets/improvableskills/textures/abilities/anvil_hovered.png
+SHA-256-Digest: Ijcl3vA5qQJNqfW0LmHw9j635/EOjLrNMFqHHpPOe1Y=
+
+Name: org/zeith/improvableskills/api/client/ISlotRenderer.class
+SHA-256-Digest: 8IbcxgxQSYKfXXlxWdm+dKpiuQ2nSF7Q+i1zcZbFT40=
+
+Name: assets/improvableskills/textures/skills/digging_hovered.png
+SHA-256-Digest: rjFbtM7RhZow7C28uFJCKL4/E7VbBNMSjWsxq64/zr8=
+
+Name: assets/improvableskills/textures/item/scroll_normal_overlay.png
+SHA-256-Digest: AKyruVZENtbGcuy2Dj7qrLPY2xOQwIHnrOiRjtBzsQM=
+
+Name: assets/improvableskills/lang/uk_ua.lang
+SHA-256-Digest: ZuqdubJrLyJnzZgVF123V2MAdzUPA0/6RSxKTmo8cjc=
+
+Name: assets/improvableskills/textures/item/skills_book.png
+SHA-256-Digest: rs+TT+yiCFe/iVFpmKfl13QqIOhFEag6zBJxuDx1myc=
+
+Name: org/zeith/improvableskills/mixins/AbstractFurnaceBlockEntityAccess
+ or.class
+SHA-256-Digest: oYtANyPerMnV/UboZJFkzCkJQtPdjgPr+WYeBC7qFMY=
+
+Name: assets/improvableskills/models/item/scroll_ability.json
+SHA-256-Digest: I2kgz8FO+MLCILYB9z1G9aLKwbX3InZpNcBMa805Gng=
+

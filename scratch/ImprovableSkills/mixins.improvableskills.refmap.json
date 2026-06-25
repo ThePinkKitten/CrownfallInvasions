@@ -1,0 +1,66 @@
+{
+  "mappings": {
+    "org/zeith/improvableskills/mixins/Vec3Accessor": {
+      "x": "f_82479_:D",
+      "y": "f_82480_:D",
+      "z": "f_82481_:D"
+    },
+    "org/zeith/improvableskills/mixins/WanderingTraderMixin": {
+      "mobInteract": "Lnet/minecraft/world/entity/npc/WanderingTrader;m_6071_(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;",
+      "Lnet/minecraft/world/entity/npc/WanderingTrader;setTradingPlayer(Lnet/minecraft/world/entity/player/Player;)V": "Lnet/minecraft/world/entity/npc/WanderingTrader;m_7189_(Lnet/minecraft/world/entity/player/Player;)V"
+    },
+    "org/zeith/improvableskills/mixins/AbstractFurnaceBlockEntityAccessor": {
+      "burn": "m_266209_(Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/item/crafting/Recipe;Lnet/minecraft/core/NonNullList;I)Z",
+      "cookingTotalTime": "f_58319_:I",
+      "litTime": "f_58316_:I",
+      "items": "f_58310_:Lnet/minecraft/core/NonNullList;",
+      "cookingProgress": "f_58318_:I"
+    },
+    "org/zeith/improvableskills/mixins/VillagerMixin": {
+      "updateSpecialPrices": "Lnet/minecraft/world/entity/npc/Villager;m_35540_(Lnet/minecraft/world/entity/player/Player;)V"
+    },
+    "org/zeith/improvableskills/mixins/BrewingStandBlockEntityAccessor": {
+      "brewTime": "f_58976_:I"
+    },
+    "org/zeith/improvableskills/mixins/AbstractFurnaceBlockEntityMixin": {
+      "awardUsedRecipesAndPopExperience": "Lnet/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity;m_155003_(Lnet/minecraft/server/level/ServerPlayer;)V"
+    },
+    "org/zeith/improvableskills/mixins/EnchantmentHelperMixin": {
+      "getEnchantmentLevel(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I": "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;m_44836_(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I",
+      "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;getItemEnchantmentLevel(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/item/ItemStack;)I": "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;m_44843_(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/item/ItemStack;)I"
+    }
+  },
+  "data": {
+    "searge": {
+      "org/zeith/improvableskills/mixins/Vec3Accessor": {
+        "x": "f_82479_:D",
+        "y": "f_82480_:D",
+        "z": "f_82481_:D"
+      },
+      "org/zeith/improvableskills/mixins/WanderingTraderMixin": {
+        "mobInteract": "Lnet/minecraft/world/entity/npc/WanderingTrader;m_6071_(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;",
+        "Lnet/minecraft/world/entity/npc/WanderingTrader;setTradingPlayer(Lnet/minecraft/world/entity/player/Player;)V": "Lnet/minecraft/world/entity/npc/WanderingTrader;m_7189_(Lnet/minecraft/world/entity/player/Player;)V"
+      },
+      "org/zeith/improvableskills/mixins/AbstractFurnaceBlockEntityAccessor": {
+        "burn": "m_266209_(Lnet/minecraft/core/RegistryAccess;Lnet/minecraft/world/item/crafting/Recipe;Lnet/minecraft/core/NonNullList;I)Z",
+        "cookingTotalTime": "f_58319_:I",
+        "litTime": "f_58316_:I",
+        "items": "f_58310_:Lnet/minecraft/core/NonNullList;",
+        "cookingProgress": "f_58318_:I"
+      },
+      "org/zeith/improvableskills/mixins/VillagerMixin": {
+        "updateSpecialPrices": "Lnet/minecraft/world/entity/npc/Villager;m_35540_(Lnet/minecraft/world/entity/player/Player;)V"
+      },
+      "org/zeith/improvableskills/mixins/BrewingStandBlockEntityAccessor": {
+        "brewTime": "f_58976_:I"
+      },
+      "org/zeith/improvableskills/mixins/AbstractFurnaceBlockEntityMixin": {
+        "awardUsedRecipesAndPopExperience": "Lnet/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity;m_155003_(Lnet/minecraft/server/level/ServerPlayer;)V"
+      },
+      "org/zeith/improvableskills/mixins/EnchantmentHelperMixin": {
+        "getEnchantmentLevel(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I": "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;m_44836_(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/entity/LivingEntity;)I",
+        "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;getItemEnchantmentLevel(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/item/ItemStack;)I": "Lnet/minecraft/world/item/enchantment/EnchantmentHelper;m_44843_(Lnet/minecraft/world/item/enchantment/Enchantment;Lnet/minecraft/world/item/ItemStack;)I"
+      }
+    }
+  }
+}

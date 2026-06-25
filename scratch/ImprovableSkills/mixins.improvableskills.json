@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8.5",
+  "package": "org.zeith.improvableskills.mixins",
+  "refmap": "mixins.improvableskills.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractFurnaceBlockEntityAccessor",
+    "AbstractFurnaceBlockEntityMixin",
+    "BrewingStandBlockEntityAccessor",
+    "EnchantmentHelperMixin",
+    "ServerPlayerGameModeMixin",
+    "Vec3Accessor",
+    "VillagerMixin",
+    "WanderingTraderMixin",
+    "jer.LootConditionHelperMixin"
+  ],
+  "client": [
+  ],
+  "server": [
+  ]
+}
