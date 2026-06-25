@@ -56,15 +56,37 @@ public class CrownfallEvents {
     private static final int WAR_CRY_CD = 300;
     private static final int ELITE_AURA_CD = 120;
 
-    // ==================== FRIENDLY FIRE + VANGUARD ON-HIT ====================
+    // ==================== FRIENDLY FIRE + VANGUARD ON-HIT + ENDLESS SCALING ====================
     @SubscribeEvent
     public static void onLivingHurt(LivingHurtEvent event) {
         if (event.getEntity().level().isClientSide) return;
 
+        LivingEntity victim = event.getEntity();
+        String victimRole = victim.getPersistentData().getString("crownfall_role");
+
+        // --- Horde Specific Logic ---
+        if (!victimRole.isEmpty()) {
+            // 1. Lightning Immunity (prevents King's Chain Lightning from killing his own horde)
+            if (event.getSource().getMsgId().equals("lightningBolt")) {
+                event.setCanceled(true);
+                return;
+            }
+
+            // 2. Endless HP Scaling Bypass (Damage Reduction)
+            // Minecraft hardcaps max HP at 1024. We bypass this by storing the ratio of (1024 / intended_hp)
+            // and proportionally reducing incoming damage to simulate massive HP pools!
+            if (victim.getPersistentData().contains("crownfall_hp_ratio")) {
+                double ratio = victim.getPersistentData().getDouble("crownfall_hp_ratio");
+                if (ratio < 1.0) {
+                    event.setAmount((float) (event.getAmount() * ratio));
+                }
+            }
+        }
+
         // --- Friendly Fire Immunity: same horde members never damage each other ---
         if (event.getSource().getEntity() instanceof LivingEntity attacker) {
             String attackerHordeId = attacker.getPersistentData().getString("crownfall_horde_id");
-            String victimHordeId = event.getEntity().getPersistentData().getString("crownfall_horde_id");
+            String victimHordeId = victim.getPersistentData().getString("crownfall_horde_id");
             if (!attackerHordeId.isEmpty() && attackerHordeId.equals(victimHordeId)) {
                 event.setCanceled(true);
                 return;
@@ -75,7 +97,7 @@ public class CrownfallEvents {
         if (event.getSource().getEntity() instanceof Zombie attacker) {
             String role = attacker.getPersistentData().getString("crownfall_role");
             String hordeId = attacker.getPersistentData().getString("crownfall_horde_id");
-            if ("minion".equals(role) && !hordeId.isEmpty() && event.getEntity() instanceof Player target) {
+            if ("minion".equals(role) && !hordeId.isEmpty() && victim instanceof Player target) {
                 if (RANDOM.nextDouble() < 0.30) {
                     target.addEffect(new MobEffectInstance(MobEffects.WITHER, 80, 1, false, true));
                     target.addEffect(new MobEffectInstance(MobEffects.POISON, 80, 1, false, true));
@@ -265,7 +287,8 @@ public class CrownfallEvents {
             if (!hordeId.equals(member.getPersistentData().getString("crownfall_horde_id")) || member == elite) continue;
             String memberRole = member.getPersistentData().getString("crownfall_role");
             if ("king".equals(memberRole)) {
-                member.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 120, 1, false, false));
+                member.heal(5.0f); // Regeneration effect does not work on Undead (King is Zombie)
+                level.sendParticles(ParticleTypes.HEART, member.getX(), member.getY() + 2, member.getZ(), 3, 0.5, 0.5, 0.5, 0);
             } else if ("minion".equals(memberRole)) {
                 member.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 120, 3, false, false));
             }

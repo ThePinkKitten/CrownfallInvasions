@@ -107,6 +107,22 @@ public class CrownfallSpawnEvent {
         return new BlockPos(x, baseY, z); // Fallback to base Y if no safe spot found
     }
 
+    /**
+     * Applies calculated HP to an entity. Bypasses the 1024.0 vanilla hardcap 
+     * by storing an HP ratio and using it to proportionally reduce incoming damage.
+     */
+    private static void applyScaledHealth(Mob entity, double calculatedHp) {
+        double actualHp = Math.min(1024.0, calculatedHp); // Vanilla max health hardcap
+        double hpRatio = actualHp / calculatedHp;
+        
+        entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(actualHp);
+        entity.setHealth((float) actualHp);
+        
+        if (hpRatio < 1.0) {
+            entity.getPersistentData().putDouble("crownfall_hp_ratio", hpRatio);
+        }
+    }
+
     public static void spawnHorde(ServerLevel level, BlockPos pos) {
         int globalKills = com.thepinkkitten.crownfallinvasions.CrownfallWorldData.get(level).getGlobalKillCount();
         String hordeId = UUID.randomUUID().toString();
@@ -120,8 +136,7 @@ public class CrownfallSpawnEvent {
             king.setCustomNameVisible(true);
             
             double kingHp = getScaledHealth(normalizedDifficulty, KING_BASE_HP, KING_SCALE_MULT);
-            king.getAttribute(Attributes.MAX_HEALTH).setBaseValue(kingHp);
-            king.setHealth((float) kingHp);
+            applyScaledHealth(king, kingHp);
             
             // King Gear: Full Gold + Protection IV + Unbreaking III + Thorns III
             king.setItemSlot(EquipmentSlot.HEAD, enchantKingArmor(new ItemStack(Items.GOLDEN_HELMET)));
@@ -168,8 +183,7 @@ public class CrownfallSpawnEvent {
                 elite.setCustomNameVisible(true);
                 
                 double eliteHp = getScaledHealth(normalizedDifficulty, ELITE_BASE_HP, ELITE_SCALE_MULT);
-                elite.getAttribute(Attributes.MAX_HEALTH).setBaseValue(eliteHp);
-                elite.setHealth((float) eliteHp);
+                applyScaledHealth(elite, eliteHp);
                 elite.getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue(0.35);
 
                 elite.getPersistentData().putString("crownfall_horde_id", hordeId);
@@ -209,8 +223,7 @@ public class CrownfallSpawnEvent {
             } else {
                 minionHp = getScaledHealth(normalizedDifficulty, SKELETON_ARCHER_BASE_HP, SKELETON_ARCHER_SCALE_MULT);
             }
-            minion.getAttribute(Attributes.MAX_HEALTH).setBaseValue(minionHp);
-            minion.setHealth((float) minionHp);
+            applyScaledHealth(minion, minionHp);
 
             boolean isNetherite = RANDOM.nextBoolean();
             minion.setItemSlot(EquipmentSlot.HEAD, enchantArmor(new ItemStack(isNetherite ? Items.NETHERITE_HELMET : Items.DIAMOND_HELMET), globalKills));
