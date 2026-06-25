@@ -152,8 +152,8 @@ public class CrownfallEvents {
         if (skillCd > 0) { king.getPersistentData().putInt("crownfall_skill_cd", --skillCd); }
         if (warcryCd > 0) { king.getPersistentData().putInt("crownfall_warcry_cd", --warcryCd); }
 
-        // Skill Execution — radius maxSkillRange blocks + line of sight required
-        double maxSkillRange = Math.min(64.0D, 30.0D + globalKills);
+        // Skill Execution — radius scales endlessly with globalKills (no cap, by design)
+        double maxSkillRange = 30.0D + globalKills;
         List<ServerPlayer> playersInRange = level.getPlayers(p -> p.distanceTo(king) < maxSkillRange && !p.isSpectator() && p.isAlive() && king.hasLineOfSight(p));
         if (playersInRange.isEmpty()) return;
 
@@ -407,6 +407,11 @@ public class CrownfallEvents {
             if (RANDOM.nextBoolean()) {
                 addDrop(event, new ItemStack(Items.GOLDEN_APPLE, 1 + RANDOM.nextInt(2)));
             }
+        } else if ("minion".equals(role)) {
+            // Cap enchantments on dropped gear to vanilla max levels
+            for (ItemEntity drop : event.getDrops()) {
+                capDropEnchantments(drop.getItem());
+            }
         } else if ("king".equals(role)) {
             int rewardCount = getRewardCount(diff);
             for (int i = 0; i < rewardCount; i++) {
@@ -420,6 +425,23 @@ public class CrownfallEvents {
         ItemEntity itemEntity = new ItemEntity(entity.level(), entity.getX(), entity.getY(), entity.getZ(), stack);
         itemEntity.setDefaultPickUpDelay();
         event.getDrops().add(itemEntity);
+    }
+
+    /**
+     * Caps all enchantments on an ItemStack to their vanilla max levels.
+     * Mobs wear OP gear (Prot 10, Sharp 10) for combat, but if gear drops,
+     * players only receive vanilla-legal enchantments (Prot 4, Sharp 5, etc.).
+     */
+    private static void capDropEnchantments(ItemStack stack) {
+        Map<net.minecraft.world.item.enchantment.Enchantment, Integer> enchants = stack.getAllEnchantments();
+        if (enchants.isEmpty()) return;
+        // Clear existing enchantments tag
+        if (stack.getTag() != null) stack.getTag().remove("Enchantments");
+        // Re-add with capped levels
+        for (Map.Entry<net.minecraft.world.item.enchantment.Enchantment, Integer> entry : enchants.entrySet()) {
+            int cappedLevel = Math.min(entry.getValue(), entry.getKey().getMaxLevel());
+            stack.enchant(entry.getKey(), cappedLevel);
+        }
     }
 
     // ==================== REWARD TIER SYSTEM ====================
