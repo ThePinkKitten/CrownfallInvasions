@@ -108,18 +108,27 @@ public class CrownfallSpawnEvent {
     }
 
     /**
-     * Applies calculated HP to an entity. Bypasses the 1024.0 vanilla hardcap 
-     * by storing an HP ratio and using it to proportionally reduce incoming damage.
+     * Applies calculated HP to an entity. 
+     * Dynamically adapts: If a mod like AttributeFix is installed, the HP is fully applied.
+     * If Vanilla Minecraft silently clamps the HP (e.g. to 1024.0), it detects the clamp
+     * and uses the HP ratio damage reduction to preserve Endless Scaling mathematically.
      */
     private static void applyScaledHealth(Mob entity, double calculatedHp) {
-        double actualHp = Math.min(1024.0, calculatedHp); // Vanilla max health hardcap
+        // Attempt to set the raw calculated HP
+        entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(calculatedHp);
+        
+        // Read back what the game actually accepted (detects vanilla silent clamping)
+        double actualHp = entity.getAttribute(Attributes.MAX_HEALTH).getBaseValue();
         double hpRatio = actualHp / calculatedHp;
         
-        entity.getAttribute(Attributes.MAX_HEALTH).setBaseValue(actualHp);
         entity.setHealth((float) actualHp);
         
-        if (hpRatio < 1.0) {
+        // Only apply the bypass if the game refused to give us the full HP
+        if (hpRatio < 0.99) {
             entity.getPersistentData().putDouble("crownfall_hp_ratio", hpRatio);
+        } else {
+            // Ensure no leftover ratio if scaling is supported naturally
+            entity.getPersistentData().remove("crownfall_hp_ratio");
         }
     }
 
