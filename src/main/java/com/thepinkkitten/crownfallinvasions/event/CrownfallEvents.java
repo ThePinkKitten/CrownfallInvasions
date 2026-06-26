@@ -209,6 +209,7 @@ public class CrownfallEvents {
             ServerPlayer farthest = playersInRange.stream().max(Comparator.comparingDouble(p -> p.distanceTo(king))).orElse(null);
             ServerPlayer nearestFar = playersInRange.stream().filter(p -> p.distanceTo(king) > 8.0D).min(Comparator.comparingDouble(p -> p.distanceTo(king))).orElse(null);
             if (farthest != null && farthest.distanceTo(king) > 8.0D) {
+                // Ranged targets exist — pick between pull/lightning
                 if (RANDOM.nextBoolean()) {
                     if (phase == 2) executeBlackHole(king, level, farthest, cdMultiplier, globalKills);
                     else executeGravityPull(king, level, farthest, cdMultiplier, globalKills);
@@ -218,8 +219,9 @@ public class CrownfallEvents {
                     if (phase == 2) executeBlackHole(king, level, farthest, cdMultiplier, globalKills);
                     else executeGravityPull(king, level, farthest, cdMultiplier, globalKills);
                 }
-            } else if (nearestFar != null) {
-                executeChainLightning(king, level, nearestFar, cdMultiplier, globalKills);
+            } else if (farthest != null) {
+                // ALL players are melee range (<= 8 blocks) — use Chain Lightning as close-range AOE
+                executeChainLightning(king, level, farthest, cdMultiplier, globalKills);
             }
         }
     }
@@ -288,7 +290,12 @@ public class CrownfallEvents {
                         
                         if (dist < 9.0D) { // < 3 blocks from center
                             p.hurt(level.damageSources().wither(), 5.0f);
-                            p.removeAllEffects(); // PURGE BUFFS
+                            // Purge only BENEFICIAL effects (buffs) — keep debuffs like Wither/Poison intact
+                            p.getActiveEffects().stream()
+                                .filter(effect -> effect.getEffect().isBeneficial())
+                                .map(effect -> effect.getEffect())
+                                .toList()
+                                .forEach(p::removeEffect);
                         }
                     }
                 }
