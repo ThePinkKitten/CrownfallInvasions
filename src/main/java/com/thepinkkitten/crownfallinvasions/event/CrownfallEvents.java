@@ -51,8 +51,8 @@ public class CrownfallEvents {
     private static final float TIER_ENDLESS = 10.0f;
 
     // Skill cooldowns (ticks)
-    private static final int CHAIN_LIGHTNING_CD = 100;
-    private static final int GRAVITY_PULL_CD = 160;
+    private static final int CHAIN_LIGHTNING_CD = 160;
+    private static final int GRAVITY_PULL_CD = 240;
     private static final int WAR_CRY_CD = 300;
     private static final int ELITE_AURA_CD = 120;
 
