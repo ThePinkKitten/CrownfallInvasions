@@ -270,11 +270,11 @@ public class CrownfallSpawnEvent {
 
             minion.getPersistentData().putString("crownfall_horde_id", hordeId);
             minion.getPersistentData().putString("crownfall_role", "minion");
-        if (isRoyalGuard) {
-            minion.getPersistentData().putBoolean("crownfall_royal_guard", true);
-            minion.setCustomName(net.minecraft.network.chat.Component.literal("Royal Guard").withStyle(net.minecraft.ChatFormatting.GOLD, net.minecraft.ChatFormatting.BOLD));
-            minion.setCustomNameVisible(true);
-        }
+            if (isRoyalGuard) {
+                minion.getPersistentData().putBoolean("crownfall_royal_guard", true);
+                minion.setCustomName(net.minecraft.network.chat.Component.literal("Royal Guard").withStyle(net.minecraft.ChatFormatting.GOLD, net.minecraft.ChatFormatting.BOLD));
+                minion.setCustomNameVisible(true);
+            }
             if (king != null) {
                 minion.getPersistentData().putString("crownfall_king_uuid", king.getUUID().toString());
             }

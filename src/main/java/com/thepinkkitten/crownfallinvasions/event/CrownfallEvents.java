@@ -73,11 +73,10 @@ public class CrownfallEvents {
             }
 
             // 1b. Projectile Meat Shield (King Phase 2)
+            // Only blocks actual projectiles (arrows, bullets, tridents) — NOT splash potions or indirect magic
             if ("king".equals(victimRole) && victim.getPersistentData().getInt("crownfall_phase") == 2) {
-                boolean isProjectile = event.getSource().isIndirect() || 
-                                       event.getSource().getMsgId().toLowerCase().contains("projectile") || 
-                                       event.getSource().getMsgId().toLowerCase().contains("bullet") || 
-                                       event.getSource().getMsgId().toLowerCase().contains("arrow");
+                boolean isProjectile = (event.getSource().getDirectEntity() instanceof net.minecraft.world.entity.projectile.Projectile)
+                                       || event.getSource().getMsgId().toLowerCase().contains("bullet");
                 if (isProjectile) {
                     String hordeId = victim.getPersistentData().getString("crownfall_horde_id");
                     long guardCount = victim.level().getEntitiesOfClass(LivingEntity.class, victim.getBoundingBox().inflate(30.0D))
@@ -228,7 +227,7 @@ public class CrownfallEvents {
     // ==================== KING SKILLS ====================
     private static void executeChainLightning(LivingEntity king, ServerLevel level, ServerPlayer target, float cdMultiplier, int globalKills) {
         king.getPersistentData().putInt("crownfall_skill_cd", (int)(CHAIN_LIGHTNING_CD * cdMultiplier));
-        int strikeCount = 3 + (globalKills / 3);
+        int strikeCount = Math.min(15, 3 + (globalKills / 3)); // Cap at 15 to prevent TPS drops
         for (int i = 0; i < strikeCount; i++) {
             final int delay = i * 5;
             final double offsetX = (i == 0) ? 0 : (RANDOM.nextDouble() * 4 - 2);
@@ -379,8 +378,9 @@ public class CrownfallEvents {
             cloud.setWaitTime(10);
             cloud.setDuration(100); // 5 seconds
             cloud.setRadiusPerTick(-cloud.getRadius() / (float)cloud.getDuration());
+            // Only use HARM — Undead (horde members) are naturally immune to Instant Damage
+            // Removed SLOWDOWN from cloud to prevent friendly-fire debuff on own minions
             cloud.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 1)); // Instant Damage II
-            cloud.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2)); // Slowness III
             level.addFreshEntity(cloud);
         }
         for (ServerPlayer player : nearbyPlayers) {
