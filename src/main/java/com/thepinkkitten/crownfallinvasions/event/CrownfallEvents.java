@@ -1,6 +1,5 @@
 package com.thepinkkitten.crownfallinvasions.event;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerLevel;
@@ -17,9 +16,6 @@ import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.EnchantmentInstance;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.phys.Vec3;
@@ -48,7 +44,6 @@ public class CrownfallEvents {
     // Difficulty tier thresholds (normalized 0.0 - 6.0+)
     private static final float TIER_MID = 1.5f;
     private static final float TIER_LATE = 4.0f;
-    private static final float TIER_ENDLESS = 10.0f;
 
     // Skill cooldowns (ticks)
     private static final int CHAIN_LIGHTNING_CD = 160;
@@ -240,7 +235,6 @@ public class CrownfallEvents {
                     if (bolt != null) { 
                         bolt.moveTo(target.getX() + offsetX, target.getY(), target.getZ() + offsetZ); 
                         bolt.setVisualOnly(false); 
-                        bolt.getPersistentData().putString("crownfall_horde_id", king.getPersistentData().getString("crownfall_horde_id"));
                         level.addFreshEntity(bolt); 
                     }
                 }
