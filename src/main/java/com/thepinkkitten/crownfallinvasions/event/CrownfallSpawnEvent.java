@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.monster.Witch;
@@ -213,8 +214,12 @@ public class CrownfallSpawnEvent {
         }
     }
 
-    public static void spawnMinion(ServerLevel level, BlockPos pos, String hordeId, float normalizedDifficulty, net.minecraft.world.entity.LivingEntity king, int globalKills) {
-        boolean isZombie = RANDOM.nextInt(10) < 3; // 30% Zombie, 70% Skeleton
+    public static void spawnMinion(ServerLevel level, BlockPos pos, String hordeId, float normalizedDifficulty, LivingEntity king, int globalKills) {
+        spawnMinion(level, pos, hordeId, normalizedDifficulty, king, globalKills, false);
+    }
+
+    public static void spawnMinion(ServerLevel level, BlockPos pos, String hordeId, float normalizedDifficulty, LivingEntity king, int globalKills, boolean isRoyalGuard) {
+        boolean isZombie = isRoyalGuard || RANDOM.nextInt(10) < 3; // 30% Zombie, 70% Skeleton (Royal Guards are always Zombies)
         net.minecraft.world.entity.Mob minion = isZombie ? EntityType.ZOMBIE.create(level) : EntityType.SKELETON.create(level);
         
         if (minion != null) {
@@ -227,14 +232,16 @@ public class CrownfallSpawnEvent {
             
             // Zombie Vanguard: 40 base HP, Skeleton Archer: 22.5 base HP (ratio 1.77x)
             double minionHp;
-            if (isZombie) {
+            if (isRoyalGuard) {
+                minionHp = getScaledHealth(normalizedDifficulty, ZOMBIE_VANGUARD_BASE_HP * 2.0, ZOMBIE_VANGUARD_SCALE_MULT);
+            } else if (isZombie) {
                 minionHp = getScaledHealth(normalizedDifficulty, ZOMBIE_VANGUARD_BASE_HP, ZOMBIE_VANGUARD_SCALE_MULT);
             } else {
                 minionHp = getScaledHealth(normalizedDifficulty, SKELETON_ARCHER_BASE_HP, SKELETON_ARCHER_SCALE_MULT);
             }
             applyScaledHealth(minion, minionHp);
 
-            boolean isNetherite = RANDOM.nextBoolean();
+            boolean isNetherite = isRoyalGuard || RANDOM.nextBoolean(); // Royal Guards always wear Netherite
             minion.setItemSlot(EquipmentSlot.HEAD, enchantArmor(new ItemStack(isNetherite ? Items.NETHERITE_HELMET : Items.DIAMOND_HELMET), globalKills));
             minion.setItemSlot(EquipmentSlot.CHEST, enchantArmor(new ItemStack(isNetherite ? Items.NETHERITE_CHESTPLATE : Items.DIAMOND_CHESTPLATE), globalKills));
             minion.setItemSlot(EquipmentSlot.LEGS, enchantArmor(new ItemStack(isNetherite ? Items.NETHERITE_LEGGINGS : Items.DIAMOND_LEGGINGS), globalKills));
@@ -263,6 +270,11 @@ public class CrownfallSpawnEvent {
 
             minion.getPersistentData().putString("crownfall_horde_id", hordeId);
             minion.getPersistentData().putString("crownfall_role", "minion");
+        if (isRoyalGuard) {
+            minion.getPersistentData().putBoolean("crownfall_royal_guard", true);
+            minion.setCustomName(net.minecraft.network.chat.Component.literal("Royal Guard").withStyle(net.minecraft.ChatFormatting.GOLD, net.minecraft.ChatFormatting.BOLD));
+            minion.setCustomNameVisible(true);
+        }
             if (king != null) {
                 minion.getPersistentData().putString("crownfall_king_uuid", king.getUUID().toString());
             }

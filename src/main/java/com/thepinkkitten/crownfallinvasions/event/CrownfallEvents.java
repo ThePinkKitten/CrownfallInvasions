@@ -72,6 +72,26 @@ public class CrownfallEvents {
                 return;
             }
 
+            // 1b. Projectile Meat Shield (King Phase 2)
+            if ("king".equals(victimRole) && victim.getPersistentData().getInt("crownfall_phase") == 2) {
+                boolean isProjectile = event.getSource().isIndirect() || 
+                                       event.getSource().getMsgId().toLowerCase().contains("projectile") || 
+                                       event.getSource().getMsgId().toLowerCase().contains("bullet") || 
+                                       event.getSource().getMsgId().toLowerCase().contains("arrow");
+                if (isProjectile) {
+                    String hordeId = victim.getPersistentData().getString("crownfall_horde_id");
+                    long guardCount = victim.level().getEntitiesOfClass(LivingEntity.class, victim.getBoundingBox().inflate(30.0D))
+                        .stream().filter(e -> hordeId.equals(e.getPersistentData().getString("crownfall_horde_id")) && e.getPersistentData().getBoolean("crownfall_royal_guard") && e.isAlive()).count();
+                    
+                    if (guardCount > 0) {
+                        event.setAmount(event.getAmount() * 0.2f); // 80% reduction
+                        if (victim.level() instanceof ServerLevel sl) {
+                            sl.sendParticles(ParticleTypes.CRIT, victim.getX(), victim.getY() + 1, victim.getZ(), 10, 0.5, 1, 0.5, 0.1);
+                        }
+                    }
+                }
+            }
+
             // 2. Endless HP Scaling Bypass (Damage Reduction)
             // Minecraft hardcaps max HP at 1024. We bypass this by storing the ratio of (1024 / intended_hp)
             // and proportionally reducing incoming damage to simulate massive HP pools!
@@ -157,12 +177,18 @@ public class CrownfallEvents {
                 p.sendSystemMessage(net.minecraft.network.chat.Component.literal("⚠ Crownfall King has entered Phase 2!").withStyle(net.minecraft.ChatFormatting.DARK_RED, net.minecraft.ChatFormatting.BOLD));
             }
 
-            // --- Phase 2 Reinforcements ---
+            // --- Phase 2 Reinforcements (Meat Shield) ---
             int reinforcementCount = 10 + RANDOM.nextInt(6); // 10 to 15 minions
             String hordeId = king.getPersistentData().getString("crownfall_horde_id");
             float difficulty = king.getPersistentData().getFloat("crownfall_difficulty");
+            
+            // Spawn 3 Royal Guards (Meat Shields)
+            for (int i = 0; i < 3; i++) {
+                CrownfallSpawnEvent.spawnMinion(level, king.blockPosition(), hordeId, difficulty, king, globalKills, true);
+            }
+            // Spawn regular reinforcements
             for (int i = 0; i < reinforcementCount; i++) {
-                CrownfallSpawnEvent.spawnMinion(level, king.blockPosition(), hordeId, difficulty, king, globalKills);
+                CrownfallSpawnEvent.spawnMinion(level, king.blockPosition(), hordeId, difficulty, king, globalKills, false);
             }
             level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, king.getX(), king.getY(), king.getZ(), 100, 5, 1, 5, 0.05);
         }
@@ -184,9 +210,15 @@ public class CrownfallEvents {
             ServerPlayer farthest = playersInRange.stream().max(Comparator.comparingDouble(p -> p.distanceTo(king))).orElse(null);
             ServerPlayer nearestFar = playersInRange.stream().filter(p -> p.distanceTo(king) > 8.0D).min(Comparator.comparingDouble(p -> p.distanceTo(king))).orElse(null);
             if (farthest != null && farthest.distanceTo(king) > 8.0D) {
-                if (RANDOM.nextBoolean()) executeGravityPull(king, level, farthest, cdMultiplier, globalKills);
+                if (RANDOM.nextBoolean()) {
+                    if (phase == 2) executeBlackHole(king, level, farthest, cdMultiplier, globalKills);
+                    else executeGravityPull(king, level, farthest, cdMultiplier, globalKills);
+                }
                 else if (nearestFar != null) executeChainLightning(king, level, nearestFar, cdMultiplier, globalKills);
-                else executeGravityPull(king, level, farthest, cdMultiplier, globalKills);
+                else {
+                    if (phase == 2) executeBlackHole(king, level, farthest, cdMultiplier, globalKills);
+                    else executeGravityPull(king, level, farthest, cdMultiplier, globalKills);
+                }
             } else if (nearestFar != null) {
                 executeChainLightning(king, level, nearestFar, cdMultiplier, globalKills);
             }
@@ -235,6 +267,36 @@ public class CrownfallEvents {
         }));
     }
 
+    private static void executeBlackHole(LivingEntity king, ServerLevel level, ServerPlayer target, float cdMultiplier, int globalKills) {
+        king.getPersistentData().putInt("crownfall_skill_cd", (int)(GRAVITY_PULL_CD * cdMultiplier * 1.2f)); // Slightly longer CD
+        Vec3 epicenter = target.position();
+        level.playSound(null, epicenter.x, epicenter.y, epicenter.z, SoundEvents.PORTAL_TRIGGER, SoundSource.HOSTILE, 3.0F, 0.5F);
+        
+        // TickTask every 10 ticks for 5 seconds (10 iterations)
+        for (int i = 0; i < 10; i++) {
+            final int delay = i * 10;
+            level.getServer().tell(new net.minecraft.server.TickTask(level.getServer().getTickCount() + delay, () -> {
+                if (king.isAlive() && !king.isRemoved()) {
+                    level.sendParticles(ParticleTypes.REVERSE_PORTAL, epicenter.x, epicenter.y + 1, epicenter.z, 200, 5, 2, 5, 0.1);
+                    level.sendParticles(ParticleTypes.SMOKE, epicenter.x, epicenter.y + 1, epicenter.z, 50, 1, 1, 1, 0.0);
+                    
+                    List<ServerPlayer> suckedPlayers = level.getPlayers(p -> p.distanceToSqr(epicenter) < 900.0D && p.isAlive() && !p.isSpectator()); // 30 block radius
+                    for (ServerPlayer p : suckedPlayers) {
+                        double dist = p.distanceToSqr(epicenter);
+                        Vec3 direction = epicenter.subtract(p.position()).normalize().scale(0.8); // Strong pull
+                        p.setDeltaMovement(p.getDeltaMovement().add(direction.x, Math.max(direction.y, 0.1), direction.z));
+                        p.hurtMarked = true;
+                        
+                        if (dist < 9.0D) { // < 3 blocks from center
+                            p.hurt(level.damageSources().wither(), 5.0f);
+                            p.removeAllEffects(); // PURGE BUFFS
+                        }
+                    }
+                }
+            }));
+        }
+    }
+
     private static void executeWarCry(LivingEntity king, ServerLevel level, List<ServerPlayer> players, int phase, float cdMultiplier, int globalKills) {
         king.getPersistentData().putInt("crownfall_warcry_cd", (int)(WAR_CRY_CD * cdMultiplier));
         level.playSound(null, king.getX(), king.getY(), king.getZ(), SoundEvents.ENDER_DRAGON_GROWL, SoundSource.HOSTILE, 4.0F, 0.7F);
@@ -246,6 +308,20 @@ public class CrownfallEvents {
             if (player.distanceTo(king) <= debuffRadius) {
                 player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 3, false, true));
                 player.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 100, 2, false, true));
+                
+                // Armor Corrosion: Damage all armor pieces by 5% of their max durability
+                for (ItemStack armor : player.getArmorSlots()) {
+                    if (!armor.isEmpty() && armor.isDamageableItem()) {
+                        int damageAmount = Math.max(1, (int)(armor.getMaxDamage() * 0.05f));
+                        armor.hurtAndBreak(damageAmount, player, (p) -> p.broadcastBreakEvent(player.getEquipmentSlotForItem(armor)));
+                    }
+                }
+                // Corrode main hand weapon too
+                ItemStack mainHand = player.getMainHandItem();
+                if (!mainHand.isEmpty() && mainHand.isDamageableItem()) {
+                    int damageAmount = Math.max(1, (int)(mainHand.getMaxDamage() * 0.05f));
+                    mainHand.hurtAndBreak(damageAmount, player, (p) -> p.broadcastBreakEvent(net.minecraft.world.entity.EquipmentSlot.MAINHAND));
+                }
             }
         }
         String hordeId = king.getPersistentData().getString("crownfall_horde_id");
@@ -294,11 +370,21 @@ public class CrownfallEvents {
             }
         }
 
-        // Debuff players with scaled damage
+        // Debuff players with scaled damage and spawn Lingering Toxic Cloud
         List<ServerPlayer> nearbyPlayers = level.getPlayers(p -> p.distanceTo(elite) < 15.0D && !p.isSpectator() && p.isAlive());
+        if (!nearbyPlayers.isEmpty()) {
+            net.minecraft.world.entity.AreaEffectCloud cloud = new net.minecraft.world.entity.AreaEffectCloud(level, elite.getX(), elite.getY(), elite.getZ());
+            cloud.setOwner(elite);
+            cloud.setRadius(6.0F);
+            cloud.setWaitTime(10);
+            cloud.setDuration(100); // 5 seconds
+            cloud.setRadiusPerTick(-cloud.getRadius() / (float)cloud.getDuration());
+            cloud.addEffect(new MobEffectInstance(MobEffects.HARM, 1, 1)); // Instant Damage II
+            cloud.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 2)); // Slowness III
+            level.addFreshEntity(cloud);
+        }
         for (ServerPlayer player : nearbyPlayers) {
             player.hurt(level.damageSources().magic(), auraDamage);
-            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 100, 3, false, true));
             player.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 1, false, true));
             player.addEffect(new MobEffectInstance(MobEffects.POISON, 80, 1, false, true));
             player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 100, 2, false, true));
@@ -379,11 +465,32 @@ public class CrownfallEvents {
         }
     }
 
-    // ==================== KING DEATH ====================
+    // ==================== KING DEATH / VAMPIRISM ====================
     @SubscribeEvent
     public static void onLivingDeath(LivingDeathEvent event) {
         LivingEntity entity = event.getEntity();
         if (entity.level().isClientSide) return;
+        
+        // --- 1. Vampirism: Heal King if player dies nearby ---
+        if (entity instanceof Player player) {
+            ServerLevel level = (ServerLevel) player.level();
+            List<LivingEntity> kings = level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(100.0D), 
+                e -> "king".equals(e.getPersistentData().getString("crownfall_role")));
+            for (LivingEntity king : kings) {
+                if (king.isAlive()) {
+                    float healAmount = king.getMaxHealth() * 0.15f;
+                    king.heal(healAmount);
+                    level.sendParticles(ParticleTypes.HEART, king.getX(), king.getY() + 2, king.getZ(), 15, 1.0, 1.0, 1.0, 0);
+                    level.playSound(null, king.getX(), king.getY(), king.getZ(), SoundEvents.WITHER_SPAWN, SoundSource.HOSTILE, 2.0F, 1.5F);
+                    
+                    List<ServerPlayer> nearbyPlayers = level.getPlayers(p -> p.distanceTo(king) < 64.0D);
+                    for (ServerPlayer p : nearbyPlayers) {
+                        p.sendSystemMessage(net.minecraft.network.chat.Component.literal("🩸 The King harvests the fallen soul and heals!").withStyle(net.minecraft.ChatFormatting.DARK_RED, net.minecraft.ChatFormatting.ITALIC));
+                    }
+                }
+            }
+        }
+        
         String hordeId = entity.getPersistentData().getString("crownfall_horde_id");
         if (hordeId.isEmpty()) return;
         String role = entity.getPersistentData().getString("crownfall_role");
