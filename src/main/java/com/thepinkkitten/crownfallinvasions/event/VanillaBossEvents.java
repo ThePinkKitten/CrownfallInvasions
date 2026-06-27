@@ -12,12 +12,13 @@ import com.thepinkkitten.crownfallinvasions.CrownfallMain;
 import com.thepinkkitten.crownfallinvasions.CrownfallWorldData;
 import net.minecraft.server.level.ServerLevel;
 
+import net.minecraftforge.event.entity.living.LivingEvent.LivingTickEvent;
+
 @Mod.EventBusSubscriber(modid = CrownfallMain.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class VanillaBossEvents {
 
-
     @SubscribeEvent
-    public static void onBossJoinLevel(EntityJoinLevelEvent event) {
+    public static void onBossTick(LivingTickEvent event) {
         if (event.getLevel().isClientSide) return;
 
         if (event.getEntity() instanceof EnderDragon || event.getEntity() instanceof WitherBoss) {
@@ -25,11 +26,11 @@ public class VanillaBossEvents {
             
             // Only buff the boss once
             if (!boss.getPersistentData().getBoolean("crownfall_buffed")) {
-                ServerLevel level = (ServerLevel) event.getLevel();
+                ServerLevel level = (ServerLevel) boss.level();
                 int globalKills = CrownfallWorldData.get(level).getGlobalKillCount();
                 
-                // HP Formula: 1000 + (Kills * 1000). Dragon and Wither will scale significantly in the late game.
-                double calculatedHp = 1000.0 + (globalKills * 1000.0);
+                // HP Formula: 5000 + (Kills * 2000). Dragon and Wither must be extremely tanky.
+                double calculatedHp = (boss instanceof WitherBoss) ? (3000.0 + globalKills * 1000.0) : (5000.0 + globalKills * 2000.0);
                 
                 boss.getAttribute(Attributes.MAX_HEALTH).setBaseValue(calculatedHp);
                 
@@ -42,8 +43,10 @@ public class VanillaBossEvents {
                     boss.getPersistentData().putDouble("crownfall_hp_ratio", hpRatio);
                 }
                 
-                // Note: EnderDragon is IMMUNE to potion effects. 
-                // We simulate Resistance IV (80% reduction) and Strength III (2.3x damage) in LivingHurtEvent.
+                // Note: EnderDragon is IMMUNE to potion effects, but Wither isn't. 
+                // We add them here so the Wither gets particles, but we STILL simulate Resistance/Strength manually in LivingHurtEvent.
+                boss.addEffect(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.DAMAGE_RESISTANCE, net.minecraft.world.effect.MobEffectInstance.INFINITE_DURATION, 3, false, false)); // Resistance IV
+                boss.addEffect(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.DAMAGE_BOOST, net.minecraft.world.effect.MobEffectInstance.INFINITE_DURATION, 2, false, false)); // Strength III
                 boss.addEffect(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.MOVEMENT_SPEED, net.minecraft.world.effect.MobEffectInstance.INFINITE_DURATION, 2, false, false)); // Speed III
                 boss.addEffect(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.FIRE_RESISTANCE, net.minecraft.world.effect.MobEffectInstance.INFINITE_DURATION, 0, false, false));
                 
