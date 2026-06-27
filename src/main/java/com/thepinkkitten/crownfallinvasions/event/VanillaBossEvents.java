@@ -19,7 +19,7 @@ public class VanillaBossEvents {
 
     @SubscribeEvent
     public static void onBossTick(LivingTickEvent event) {
-        if (event.getLevel().isClientSide) return;
+        if (event.getEntity().level().isClientSide()) return;
 
         if (event.getEntity() instanceof EnderDragon || event.getEntity() instanceof WitherBoss) {
             LivingEntity boss = (LivingEntity) event.getEntity();
