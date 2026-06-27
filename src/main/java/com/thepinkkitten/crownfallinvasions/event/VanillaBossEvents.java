@@ -79,6 +79,5 @@ public class VanillaBossEvents {
                 event.setAmount(event.getAmount() * 2.3f);
             }
         }
-        }
     }
 }
