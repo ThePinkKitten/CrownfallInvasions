@@ -31,7 +31,7 @@ If you want a true survival challenge where your gear actually matters, this is 
 ### 👑 The Mob Hierarchy
 The Horde is not just a random group of mobs; it is a structured army. All units display their current level directly in their name tags and boss bars (e.g., **[Lv. 15]**).
 * **The King (Boss):** A massive, heavily armored leader boasting hundreds of HP. Despite wearing a stylish Gold Armor set, he possesses hidden Netherite-tier base attributes and unbreakable gear. When pushed below 50% HP, the King becomes enraged, unleashing level-scaling skills like **Chain Lightning**, **Gravity Pull** (causing Blindness at higher levels), and **War Cries** that buff the entire legion.
-* **The Elites (Specialists):** Advanced units (like Witches) that don't just attack—they cast AoE buffs on their allies and deadly debuff auras (Poison, Weakness, Slowness) on players. 
+* **The Elites (Specialists):** Advanced units (like Witches) that don't just attack—they cast AoE buffs on their allies and deadly, long-lasting debuff auras (15s Nausea, Hunger IV, Poison II, Weakness II) on players. 
 * **The Vanguard (Minions):** Armored grunts equipped with tipped arrows and enchanted weapons. Their gear enchantments scale endlessly with the global level, capable of bypassing vanilla limits (up to Sharpness X, Protection X).
 
 ### 📈 Hybrid Endless Scaling (The Core Mechanic)
@@ -57,6 +57,11 @@ Fighting the Horde is highly rewarding. The loot table dynamically scales with t
 * **Common Drops:** Earn Emeralds, Diamonds, and massive amounts of **Experience Bottles** (perfect for leveling skills or repairing gear).
 * **Elite Drops:** Guaranteed Totems of Undying and a shower of XP Bottles and Golden Apples.
 * **Late Game (Max Tier):** Defeating a Late-Game King grants a high chance of a **Jackpot Drop**, which includes extremely rare vanilla items like **Netherite Ingots, Elytras, Nether Stars, and Dragon Heads**.
+
+### 🐉 Vanilla Boss Enhancements
+The Crownfall curse extends beyond the Horde! Vanilla Bosses (The **Ender Dragon** and **Wither**) are now affected by the global kill count:
+* **Endless HP Scaling:** Like the King, their health scales infinitely based on the number of Crownfall Kings defeated across the server.
+* **Innate Power:** Upon spawning, Vanilla Bosses are permanently buffed with **Strength III, Speed II, Resistance II, and Fire Resistance**. Be prepared for a grueling, high-stakes battle!
 
 ### 🌌 Dimension Invasions (Upcoming Update!)
 *(Currently in active development)* 

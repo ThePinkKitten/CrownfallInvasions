@@ -187,6 +187,10 @@ public class CrownfallEvents {
             level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, king.getX(), king.getY(), king.getZ(), 100, 5, 1, 5, 0.05);
         }
 
+        // Update Boss Bar Name with Level
+        bossBar.setName(net.minecraft.network.chat.Component.literal("Crownfall King [Lv. " + globalKills + "]")
+                .withStyle(net.minecraft.ChatFormatting.DARK_RED, net.minecraft.ChatFormatting.BOLD));
+
         // Skill Cooldowns
         int skillCd = king.getPersistentData().getInt("crownfall_skill_cd");
         int warcryCd = king.getPersistentData().getInt("crownfall_warcry_cd");
@@ -386,10 +390,10 @@ public class CrownfallEvents {
         }
         for (ServerPlayer player : nearbyPlayers) {
             player.hurt(level.damageSources().magic(), auraDamage);
-            player.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 1, false, true));
-            player.addEffect(new MobEffectInstance(MobEffects.POISON, 80, 1, false, true));
-            player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 100, 2, false, true));
-            player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 80, 0, false, true));
+            player.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 1, false, true)); // 10 seconds Weakness II
+            player.addEffect(new MobEffectInstance(MobEffects.POISON, 160, 1, false, true)); // 8 seconds Poison II
+            player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 200, 3, false, true)); // 10 seconds Hunger IV
+            player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 300, 0, false, true)); // 15 seconds Nausea (Takes time to distort screen)
         }
     }
 
@@ -533,7 +537,7 @@ public class CrownfallEvents {
 
         if ("elite".equals(role)) {
             addDrop(event, new ItemStack(Items.TOTEM_OF_UNDYING, 1));
-            // Thay sách enchant bằng Bình XP (phục vụ Puffish Skills) và Táo vàng
+            // Replace enchanted book with EXP Bottles (for Puffish Skills) and Golden Apples
             addDrop(event, new ItemStack(Items.EXPERIENCE_BOTTLE, 16 + RANDOM.nextInt(16)));
             if (RANDOM.nextBoolean()) {
                 addDrop(event, new ItemStack(Items.GOLDEN_APPLE, 1 + RANDOM.nextInt(2)));
