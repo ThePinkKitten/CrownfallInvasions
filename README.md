@@ -28,11 +28,58 @@ If you want a true survival challenge where your gear actually matters, this is 
 
 ## 🔥 Key Features
 
-### 👑 The Mob Hierarchy
-The Horde is not just a random group of mobs; it is a structured army. All units display their current level directly in their name tags and boss bars (e.g., **[Lv. 15]**).
-* **The King (Boss):** A massive, heavily armored leader boasting hundreds of HP. Despite wearing a stylish Gold Armor set, he possesses hidden Netherite-tier base attributes and unbreakable gear. When pushed below 50% HP, the King becomes enraged, unleashing level-scaling skills like **Chain Lightning**, **Gravity Pull** (causing Blindness at higher levels), and **War Cries** that buff the entire legion.
-* **The Elites (Specialists):** Advanced units (like Witches) that don't just attack—they cast AoE buffs on their allies and deadly, long-lasting debuff auras (15s Nausea, Hunger IV, Poison II, Weakness II) on players. 
-* **The Vanguard (Minions):** Armored grunts equipped with tipped arrows and enchanted weapons. Their gear enchantments scale endlessly with the global level, capable of bypassing vanilla limits (up to Sharpness X, Protection X).
+### 📖 Bestiary & Skills Guide
+
+The Horde is a structured army with complex AI and abilities. Here is a detailed breakdown of every unit, their skills, and how to identify them:
+
+#### 👑 The Crownfall King (Boss)
+The leader of the invasion. A massive Zombie or Husk wearing full Gold Armor and a Glowing effect. He possesses hidden Netherite-tier base stats and unbreakable gear.
+
+**Phase 1 Abilities (100% - 50% HP):**
+*   **Chain Lightning:**
+    *   *Trigger:* Used frequently if players are in melee range (< 8 blocks), or randomly at range.
+    *   *Effect:* Strikes the target with multiple lightning bolts (number of strikes scales with global level). Friendly fire is disabled, so it won't hurt his minions.
+    *   *Indicator:* Actual lightning strikes hitting you.
+*   **Gravity Pull:**
+    *   *Trigger:* Used against ranged players (> 8 blocks away).
+    *   *Effect:* Forcibly yanks the player towards the King. At higher levels (Lv. 10+), it also inflicts Blindness for 3 seconds.
+    *   *Indicator:* End Rod particles forming a vortex towards the player + Enderman teleport sound.
+*   **Commanding War Cry:**
+    *   *Trigger:* Used periodically.
+    *   *Effect:* Heals all nearby minions for 10% of their max HP and grants them Strength and Speed buffs.
+    *   *Indicator:* Ender Dragon growl sound + Angry Villager particles around the King + Heart particles on minions.
+
+**Phase 2: Enraged (Under 50% HP):**
+*   *Transition Indicator:* A massive fiery explosion, Wither spawn sound, and a chat warning: `"⚠ Crownfall King has entered Phase 2!"`.
+*   *Stat Boost:* The King gains **Resistance IV** (80% damage reduction), **Strength III**, and **Speed III**.
+*   *Frenzy:* All skill cooldowns are cut in half. He attacks twice as fast.
+*   *Black Hole Upgrade:* Gravity Pull is upgraded to **Black Hole**, which deals heavy magic damage upon pulling you and applies longer Blindness.
+*   *Reinforcements:* Immediately summons a wave of 10-15 Minions.
+*   *Meat Shield (CRITICAL):* Summons 3 elite "Royal Guards". **As long as ANY Royal Guard is alive, the King takes 80% LESS damage from projectiles (Bullets/Arrows).** You must kill the guards first or use melee/magic!
+    *   *Indicator:* Projectiles hitting the King will spawn Crit particles, indicating the damage was heavily blocked.
+
+#### 🔮 The Elites (Witches)
+The support casters of the Horde. They don't throw standard potions; they emit deadly AoE auras.
+*   **Aura of Decay (Offensive):**
+    *   *Trigger:* Player gets within 15 blocks of an Elite.
+    *   *Effect:* Deals continuous magic damage and inflicts a devastating combo of debuffs: **Nausea (15s), Weakness II (10s), Hunger IV (10s), and Poison II (8s)**.
+    *   *Indicator:* Witch cackling sound, an Instant Damage II Lingering Cloud at the Witch's feet, and your screen distorting wildly.
+*   **Aura of Vitality (Support):**
+    *   *Trigger:* Passive.
+    *   *Effect:* Constantly heals the King and nearby Vanguard minions.
+    *   *Indicator:* Happy Villager (green star) particles floating around healed mobs.
+
+#### ⚔️ The Vanguard (Minions)
+The grunts. Zombies and Skeletons wearing Diamond or Netherite armor. Their gear enchantments scale infinitely with the global level (up to Sharpness X, Protection X, Power X).
+*   **Zombie Vanguard (Melee):**
+    *   *Skill (Infectious Strike):* Every successful melee hit inflicts **Wither II and Poison II** for 5 seconds.
+    *   *Indicator:* Black and green potion particles swirling around you after being hit.
+*   **Skeleton Archer (Ranged):**
+    *   *Skill (Toxic Volley):* They do not shoot normal arrows. Every arrow shot is an **Instant Damage II** tipped arrow.
+    *   *Indicator:* Purple potion trails following their arrows.
+*   **Royal Guards (Phase 2 Only):**
+    *   *Visual:* Zombies in full Netherite with a gold `Royal Guard` nametag.
+    *   *Effect:* As mentioned above, their mere presence gives the King an 80% Projectile Shield. Target them immediately!
 
 ### 📈 Hybrid Endless Scaling (The Core Mechanic)
 Crownfall Invasions uses an **Endless Hybrid Scaling System** that combines Minecraft's vanilla *Local Difficulty* with a global server-wide kill counter.

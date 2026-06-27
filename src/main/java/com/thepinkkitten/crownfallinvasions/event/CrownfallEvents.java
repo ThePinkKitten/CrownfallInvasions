@@ -97,11 +97,10 @@ public class CrownfallEvents {
             }
         }
 
-        // --- Friendly Fire Immunity: same horde members never damage each other ---
+        // --- Friendly Fire Immunity: Crownfall mobs never damage each other ---
         if (event.getSource().getEntity() instanceof LivingEntity attacker) {
-            String attackerHordeId = attacker.getPersistentData().getString("crownfall_horde_id");
-            String victimHordeId = victim.getPersistentData().getString("crownfall_horde_id");
-            if (!attackerHordeId.isEmpty() && attackerHordeId.equals(victimHordeId)) {
+            String attackerRole = attacker.getPersistentData().getString("crownfall_role");
+            if (!attackerRole.isEmpty() && !victimRole.isEmpty()) {
                 event.setCanceled(true);
                 return;
             }

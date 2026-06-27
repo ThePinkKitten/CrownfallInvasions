@@ -11,7 +11,6 @@ import net.minecraftforge.fml.common.Mod;
 import com.thepinkkitten.crownfallinvasions.CrownfallMain;
 import com.thepinkkitten.crownfallinvasions.CrownfallWorldData;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.entity.projectile.Projectile;
 
 @Mod.EventBusSubscriber(modid = CrownfallMain.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class VanillaBossEvents {
@@ -43,9 +42,8 @@ public class VanillaBossEvents {
                     boss.getPersistentData().putDouble("crownfall_hp_ratio", hpRatio);
                 }
                 
-                // Add innate strength buffs (Except Regeneration)
-                boss.addEffect(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.DAMAGE_RESISTANCE, net.minecraft.world.effect.MobEffectInstance.INFINITE_DURATION, 3, false, false)); // Resistance IV
-                boss.addEffect(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.DAMAGE_BOOST, net.minecraft.world.effect.MobEffectInstance.INFINITE_DURATION, 2, false, false)); // Strength III
+                // Note: EnderDragon is IMMUNE to potion effects. 
+                // We simulate Resistance IV (80% reduction) and Strength III (2.3x damage) in LivingHurtEvent.
                 boss.addEffect(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.MOVEMENT_SPEED, net.minecraft.world.effect.MobEffectInstance.INFINITE_DURATION, 2, false, false)); // Speed III
                 boss.addEffect(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.FIRE_RESISTANCE, net.minecraft.world.effect.MobEffectInstance.INFINITE_DURATION, 0, false, false));
                 
@@ -68,6 +66,19 @@ public class VanillaBossEvents {
                     event.setAmount((float) (event.getAmount() * ratio));
                 }
             }
+            
+            // 2. Simulate Resistance IV (80% Damage Reduction) because Dragon is immune to potion effects
+            if (victim.getPersistentData().getBoolean("crownfall_buffed")) {
+                event.setAmount(event.getAmount() * 0.2f);
+            }
+        }
+        
+        // 3. Simulate Strength III (2.3x Damage) when Boss attacks
+        if (event.getSource().getEntity() instanceof LivingEntity attacker) {
+            if ((attacker instanceof EnderDragon || attacker instanceof WitherBoss) && attacker.getPersistentData().getBoolean("crownfall_buffed")) {
+                event.setAmount(event.getAmount() * 2.3f);
+            }
+        }
         }
     }
 }

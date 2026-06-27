@@ -207,7 +207,7 @@ public class CrownfallSpawnEvent {
         }
 
         // 3. Spawn Minions — 7:3 ratio (Skeleton:Zombie)
-        // Tăng số lượng minion lên 20-35
+        // Increased minion count to 20-35
         int minionCount = 20 + RANDOM.nextInt(16);
         for (int i = 0; i < minionCount; i++) {
             spawnMinion(level, pos, hordeId, normalizedDifficulty, king, globalKills);
